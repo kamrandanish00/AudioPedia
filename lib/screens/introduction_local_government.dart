@@ -400,7 +400,7 @@ class _IntroductionToLocalGovernmentState
                 height: height * 0.03,
               ),
 
-              Text('Powered by @ IT Artificer')
+              Text('Powered by @ IT Artificer k'),
             ],
           ),
           Positioned(
