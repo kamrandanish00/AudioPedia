@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:lgs_audiopedia/common/contact_drawer.dart';
-import 'package:lgs_audiopedia/common/custom_drawer.dart';
-import 'package:lgs_audiopedia/common/custom_end_drawer.dart';
+
 import 'package:lgs_audiopedia/common/header.dart';
+import 'package:lgs_audiopedia/screens/english_screens/Dengue_screens/village_counsel_dengue.dart';
+import 'package:lgs_audiopedia/screens/english_screens/lg_screens_english/village_counsel_lg_eng.dart';
 import 'package:lgs_audiopedia/screens/english_screens/village_counsel.dart';
 
 class CovidLgs extends StatelessWidget {
@@ -52,10 +53,10 @@ class CovidLgs extends StatelessWidget {
                       children: [
                         GestureDetector(
                           onTap: () {
-                            // Navigator.push(
-                            //     context,
-                            //     MaterialPageRoute(
-                            //         builder: (ctx) => VillageCounsel()));
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (ctx) => VillageCounselLGEng()));
                           },
                           child: Image.asset(
                             'assets/lg.png',
@@ -74,9 +75,17 @@ class CovidLgs extends StatelessWidget {
                             fit: BoxFit.contain,
                           ),
                         ),
-                        Image.asset(
-                          'assets/general.png',
-                          fit: BoxFit.contain,
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (ctx) => VillageCounselDengue()));
+                          },
+                          child: Image.asset(
+                            'assets/general.png',
+                            fit: BoxFit.contain,
+                          ),
                         ),
                       ],
                     ),
