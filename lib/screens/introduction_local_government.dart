@@ -429,8 +429,8 @@ class _IntroductionToLocalGovernmentState
       ///new work with abdal ahmad
       body: SafeArea(
         child: PageView.builder(
-          itemCount: widget.dataTopics.,
-          itemBuilder: (context, index) {
+            // itemCount: widget.dataTopics.,
+            itemBuilder: (context, index) {
           return Stack(
             children: [
               Column(
