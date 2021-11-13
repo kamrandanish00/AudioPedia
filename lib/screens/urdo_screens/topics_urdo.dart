@@ -4,8 +4,8 @@ import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 import 'package:lgs_audiopedia/common/custom_drawer.dart';
 import 'package:lgs_audiopedia/common/header.dart';
 import 'package:lgs_audiopedia/model/topic.dart';
-import 'package:lgs_audiopedia/screens/introduction_local_government.dart';
-import 'package:lgs_audiopedia/screens/search_widget.dart';
+import 'package:lgs_audiopedia/screens/english_screens/introduction_local_government.dart';
+import 'package:lgs_audiopedia/screens/english_screens/search_widget.dart';
 import 'package:lgs_audiopedia/screens/topics_data.dart';
 import 'package:lgs_audiopedia/screens/urdo_screens/model/topics_data_urdo.dart';
 

@@ -11,7 +11,7 @@ import 'package:lgs_audiopedia/l10n/l10n.dart';
 import 'package:lgs_audiopedia/l10n/localization/localization_system_page.dart';
 import 'package:lgs_audiopedia/l10n/localization/provider/locale_provider.dart';
 import 'package:lgs_audiopedia/rough_downloader.dart';
-import 'package:lgs_audiopedia/screens/Splash_screen.dart';
+import 'package:lgs_audiopedia/screens/english_screens/Splash_screen.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 

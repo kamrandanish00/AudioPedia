@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lgs_audiopedia/screens/contact_details.dart';
-import 'package:lgs_audiopedia/screens/feedback_form.dart';
+import 'package:lgs_audiopedia/screens/english_screens/contact_details.dart';
+import 'package:lgs_audiopedia/screens/english_screens/feedback_form.dart';
 
 class ContactDrawer extends StatelessWidget {
   const ContactDrawer({Key? key}) : super(key: key);

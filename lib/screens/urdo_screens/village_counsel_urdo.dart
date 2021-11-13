@@ -2,7 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:lgs_audiopedia/common/header.dart';
-import 'package:lgs_audiopedia/screens/tehsil_counsel.dart';
+import 'package:lgs_audiopedia/screens/english_screens/tehsil_counsel.dart';
 import 'package:lgs_audiopedia/screens/urdo_screens/topics_urdo.dart';
 
 class VillageCounselUrdo extends StatelessWidget {

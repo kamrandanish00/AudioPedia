@@ -3,7 +3,7 @@ import 'package:lgs_audiopedia/common/custom_drawer.dart';
 import 'package:lgs_audiopedia/common/custom_end_drawer.dart';
 import 'package:lgs_audiopedia/common/header.dart';
 import 'package:lgs_audiopedia/screens/pashto_screen/village_counsel_pashto.dart';
-import 'package:lgs_audiopedia/screens/village_counsel.dart';
+import 'package:lgs_audiopedia/screens/english_screens/village_counsel.dart';
 
 class CovidLgPashto extends StatelessWidget {
   const CovidLgPashto({Key? key}) : super(key: key);

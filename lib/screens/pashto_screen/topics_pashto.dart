@@ -2,10 +2,9 @@ import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:lgs_audiopedia/Audiopedia_data/pashto_data.dart';
 import 'package:lgs_audiopedia/model/topic.dart';
-
-import '../introduction_local_government.dart';
-import '../search_widget.dart';
-import '../topics.dart';
+import 'package:lgs_audiopedia/screens/english_screens/introduction_local_government.dart';
+import 'package:lgs_audiopedia/screens/english_screens/search_widget.dart';
+import 'package:lgs_audiopedia/screens/english_screens/topics.dart';
 
 class TopicsPashto extends StatefulWidget {
   const TopicsPashto({Key? key}) : super(key: key);

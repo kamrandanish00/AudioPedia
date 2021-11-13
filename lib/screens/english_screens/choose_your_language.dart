@@ -5,7 +5,7 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:lgs_audiopedia/common/custom_end_drawer.dart';
 import 'package:lgs_audiopedia/common/header.dart';
 import 'package:lgs_audiopedia/main.dart';
-import 'package:lgs_audiopedia/screens/covid_lgs.dart';
+import 'package:lgs_audiopedia/screens/english_screens/covid_lgs.dart';
 import 'package:lgs_audiopedia/screens/pashto_screen/covid_lg_pashto.dart';
 import 'package:lgs_audiopedia/screens/urdo_screens/covid_lg_urdo.dart';
 

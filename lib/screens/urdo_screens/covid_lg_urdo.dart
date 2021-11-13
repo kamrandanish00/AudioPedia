@@ -3,7 +3,7 @@ import 'package:lgs_audiopedia/common/custom_drawer.dart';
 import 'package:lgs_audiopedia/common/custom_end_drawer.dart';
 import 'package:lgs_audiopedia/common/header.dart';
 import 'package:lgs_audiopedia/screens/urdo_screens/tehsil_counsel_urdo.dart';
-import 'package:lgs_audiopedia/screens/village_counsel.dart';
+import 'package:lgs_audiopedia/screens/english_screens/village_counsel.dart';
 
 class CovidLgUrdo extends StatelessWidget {
   const CovidLgUrdo({Key? key}) : super(key: key);

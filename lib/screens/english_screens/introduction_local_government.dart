@@ -4,9 +4,11 @@ import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:lgs_audiopedia/common/custom_end_drawer.dart';
 import 'package:lgs_audiopedia/model/topic.dart';
-import 'package:lgs_audiopedia/screens/feedback_form.dart';
-import 'package:lgs_audiopedia/screens/test_audio_player.dart';
-import 'package:lgs_audiopedia/screens/topics.dart';
+import 'package:lgs_audiopedia/screens/english_screens/test_audio_player.dart';
+import 'package:lgs_audiopedia/screens/english_screens/topics.dart';
+import 'package:lgs_audiopedia/screens/english_screens/feedback_form.dart';
+import 'package:lgs_audiopedia/screens/english_screens/test_audio_player.dart';
+import 'package:lgs_audiopedia/screens/english_screens/topics.dart';
 
 class IntroductionToLocalGovernment extends StatefulWidget {
   //first it was like following and was working fine

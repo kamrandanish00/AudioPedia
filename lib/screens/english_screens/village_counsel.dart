@@ -2,7 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:lgs_audiopedia/common/header.dart';
-import 'package:lgs_audiopedia/screens/tehsil_counsel.dart';
+import 'package:lgs_audiopedia/screens/english_screens/tehsil_counsel.dart';
 
 class VillageCounsel extends StatelessWidget {
   const VillageCounsel({Key? key}) : super(key: key);
