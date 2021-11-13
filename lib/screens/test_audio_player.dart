@@ -1,8 +1,10 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import 'package:share_plus/share_plus.dart';
 
 class TextAudioPlayer extends StatefulWidget {
-  const TextAudioPlayer({Key? key}) : super(key: key);
+  final String? audioPath;
+  const TextAudioPlayer({Key? key, this.audioPath}) : super(key: key);
 
   @override
   _TextAudioPlayerState createState() => _TextAudioPlayerState();
@@ -20,10 +22,15 @@ class _TextAudioPlayerState extends State<TextAudioPlayer> {
 
   //new video code florian prum channel
   AudioPlayer audioPlayer = AudioPlayer();
-  //  audioPlayerState = AudioPlayerState.PAUSED;
 
   AudioCache? audioCache;
-  String path = 'sound_audio.mp3';
+
+  // String path = 'sound_audio.mp3';
+  //new audio
+  // String path = 'COVID_19.mp3';
+
+  //path taken from the local object [topic]
+  // String? path = widget.audioPath;
   // 'https://hwcdn.libsyn.com/p/7/1/6/716785ae39065fbd/Audio_Twitter_Tweets.mp3?c_id=1940985&cs_id=1940985&expiration=1633186006&hwt=4823bc719649d5553836deb6a6815cbe';
   // 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3';
 
@@ -72,8 +79,10 @@ class _TextAudioPlayerState extends State<TextAudioPlayer> {
     });
 
     // this.widget.advancedPlayer!.setUrl(path);
-    audioPlayer.setUrl(path, isLocal: true);
-    audioCache!.load(path);
+    // audioPlayer.setUrl(path, isLocal: true);
+    audioPlayer.setUrl(widget.audioPath!, isLocal: true);
+    // audioCache!.load(path);
+    audioCache!.load(widget.audioPath!);
 
     // this.widget.advancedPlayer!.onPlayerCompletion.listen((event) {
     //   setState(() {
@@ -106,7 +115,8 @@ class _TextAudioPlayerState extends State<TextAudioPlayer> {
     super.dispose();
     audioPlayer.release();
     audioPlayer.dispose();
-    audioCache!.clear(Uri.parse(path));
+    // audioCache!.clear(Uri.parse(path));
+    audioCache!.clear(Uri.parse(widget.audioPath!));
   }
 
   Widget btnStart() {
@@ -118,7 +128,8 @@ class _TextAudioPlayerState extends State<TextAudioPlayer> {
           if (isPlaying == false) {
             // this.widget.advancedPlayer!.play(path);
             // audioPlayer.play(path);
-            audioCache!.play(path);
+            // audioCache!.play(path);
+            audioCache!.play(widget.audioPath!);
             setState(() {
               isPlaying = true;
             });
@@ -320,7 +331,20 @@ class _TextAudioPlayerState extends State<TextAudioPlayer> {
 
   Widget btnShare() {
     return IconButton(
-      onPressed: null,
+      onPressed: () async {
+        // if (path.isEmpty) {
+        if (widget.audioPath!.isEmpty) {
+          ScaffoldMessenger.of(context)
+              .showSnackBar(SnackBar(content: Text('No Audio provided!')));
+        } else {
+          // Share.share('this is');
+          // Share.shareFiles(['assets/audioButoon.png'], text: 'Great picture');
+          // Share.share('check out my audio $path');
+          Share.share('Check out this ${widget.audioPath!}');
+        }
+
+        // Share.shareFiles(path, text: 'Great picture');
+      },
       icon: Image.asset('assets/share.png'),
       iconSize: 40,
     );

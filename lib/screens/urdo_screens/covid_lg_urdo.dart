@@ -51,19 +51,27 @@ class CovidLgUrdo extends StatelessWidget {
                     children: [
                       GestureDetector(
                         onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (ctx) => TehsilCounselUrdo()));
+                          // Navigator.push(
+                          //     context,
+                          //     MaterialPageRoute(
+                          //         builder: (ctx) => TehsilCounselUrdo()));
                         },
                         child: Image.asset(
                           'assets/lg_urdo.png',
                           fit: BoxFit.contain,
                         ),
                       ),
-                      Image.asset(
-                        'assets/covid_urdo.png',
-                        fit: BoxFit.contain,
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (ctx) => TehsilCounselUrdo()));
+                        },
+                        child: Image.asset(
+                          'assets/covid_urdo.png',
+                          fit: BoxFit.contain,
+                        ),
                       ),
                       Image.asset(
                         'assets/general_urdo.png',

@@ -1,37 +1,39 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
+import 'package:lgs_audiopedia/Audiopedia_data/pashto_data.dart';
 import 'package:lgs_audiopedia/model/topic.dart';
-import 'package:lgs_audiopedia/screens/introduction_local_government.dart';
-import 'package:lgs_audiopedia/screens/search_widget.dart';
-import 'package:lgs_audiopedia/screens/topics_data.dart';
 
-class Topics extends StatefulWidget {
-  const Topics({Key? key}) : super(key: key);
+import '../introduction_local_government.dart';
+import '../search_widget.dart';
+import '../topics.dart';
+
+class TopicsPashto extends StatefulWidget {
+  const TopicsPashto({Key? key}) : super(key: key);
 
   @override
-  State<Topics> createState() => _TopicsState();
+  _TopicsPashtoState createState() => _TopicsPashtoState();
 }
 
-class _TopicsState extends State<Topics> {
+class _TopicsPashtoState extends State<TopicsPashto> {
   List<Topic>? topics;
   String query = '';
 
   List<Topic> topicData = List.generate(
-    allTopics.length,
+    allTopicsPashto.length,
     (index) => Topic(
-        id: allTopics[index].id,
-        title: allTopics[index].title,
-        description: allTopics[index].description),
+        id: allTopicsPashto[index].id,
+        title: allTopicsPashto[index].title,
+        description: allTopicsPashto[index].description),
   );
   @override
   void initState() {
     super.initState();
     // topics = allTopics;
-    topicData = allTopics;
+    topicData = allTopicsPashto;
   }
 
   void searchBook(String query) {
-    final books = allTopics.where((book) {
+    final books = allTopicsPashto.where((book) {
       final titleLower = book.title.toLowerCase();
       // final authorLower = book.author.toLowerCase();
       final searchLower = query.toLowerCase();
@@ -163,12 +165,23 @@ class _TopicsState extends State<Topics> {
                                   height: 50,
                                   width: 260,
                                   // color: Colors.green,
-                                  child: Text(
-                                    topicData[index].title,
-                                    style: TextStyle(
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.bold,
-                                    ),
+                                  child: Row(
+                                    children: [
+                                      Spacer(),
+                                      FittedBox(
+                                        fit: BoxFit.contain,
+                                        alignment: Alignment.centerRight,
+                                        child: Text(
+                                          topicData[index].title,
+                                          style: TextStyle(
+                                            fontSize: 15,
+                                            fontWeight: FontWeight.bold,
+                                            // locale: Locale('ur'),
+                                          ),
+                                          textAlign: TextAlign.right,
+                                        ),
+                                      ),
+                                    ],
                                   ),
                                 ),
                               ),
@@ -212,104 +225,4 @@ class _TopicsState extends State<Topics> {
       ),
     );
   }
-}
-
-class TopicsBtnContainer extends StatelessWidget {
-  final String? text;
-  const TopicsBtnContainer({Key? key, this.text}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
-    double height = MediaQuery.of(context).size.height;
-    return GestureDetector(
-      onTap: () {
-        // Navigator.of(context).push(MaterialPageRoute(
-        //     builder: (context) => IntroductionToLocalGovernment()));
-      },
-      child: Container(
-        height: height * 0.06,
-        width: width * 0.7,
-        decoration: BoxDecoration(
-          color: Color(0xff35016D),
-          borderRadius: BorderRadius.circular(15),
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            Image.asset(
-              'assets/important-topics.png',
-              fit: BoxFit.contain,
-              height: height * 0.02,
-            ),
-            FittedBox(
-              fit: BoxFit.cover,
-              clipBehavior: Clip.none,
-              child: Text(
-                text!,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 16,
-                ),
-              ),
-            ),
-            // SizedBox(
-            //   width: width * 0.2,
-            // ),
-            // Spacer(),
-            Image.asset(
-              'assets/right-arrow.png',
-              fit: BoxFit.contain,
-              height: height * 0.02,
-            )
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-// class DataSearch extends SearchDelegate<String> {
-//   @override
-//   List<Widget>? buildActions(BuildContext context) {
-//     //actions for app bar
-//     throw UnimplementedError();
-//   }
-
-//   @override
-//   Widget? buildLeading(BuildContext context) {
-//     //leading icon on hte left of the appp bar
-//     throw UnimplementedError();
-//   }
-
-//   @override
-//   Widget buildResults(BuildContext context) {
-//     // TODO: implement buildResults
-//     throw UnimplementedError();
-//   }
-
-//   @override
-//   Widget buildSuggestions(BuildContext context) {
-//    //show when someone searches for something
-//     throw UnimplementedError();
-//   }
-
-// }
-
-//mycustom clipper
-class MyCustomClipper extends CustomClipper<Path> {
-  @override
-  Path getClip(Size size) {
-    Path path = Path();
-    path.lineTo(0, 52);
-    path.lineTo(40, 52);
-    path.lineTo(50, 26);
-    path.lineTo(40, 0);
-    path.lineTo(0, 0);
-
-    return path;
-  }
-
-  @override
-  bool shouldReclip(covariant CustomClipper<Path> oldClipper) => true;
 }

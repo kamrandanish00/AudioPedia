@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:lgs_audiopedia/common/custom_drawer.dart';
 import 'package:lgs_audiopedia/common/custom_end_drawer.dart';
 import 'package:lgs_audiopedia/common/header.dart';
+import 'package:lgs_audiopedia/screens/pashto_screen/village_counsel_pashto.dart';
 import 'package:lgs_audiopedia/screens/village_counsel.dart';
 
 class CovidLgPashto extends StatelessWidget {
@@ -50,19 +51,27 @@ class CovidLgPashto extends StatelessWidget {
                     children: [
                       GestureDetector(
                         onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (ctx) => VillageCounsel()));
+                          // Navigator.push(
+                          //     context,
+                          //     MaterialPageRoute(
+                          //         builder: (ctx) => VillageCounselPashto()));
                         },
                         child: Image.asset(
                           'assets/lg_pashto.png',
                           fit: BoxFit.contain,
                         ),
                       ),
-                      Image.asset(
-                        'assets/covid_urdo.png',
-                        fit: BoxFit.contain,
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (ctx) => VillageCounselPashto()));
+                        },
+                        child: Image.asset(
+                          'assets/covid_urdo.png',
+                          fit: BoxFit.contain,
+                        ),
                       ),
                       Image.asset(
                         'assets/general_urdo.png',

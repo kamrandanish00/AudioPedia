@@ -42,6 +42,11 @@ dependencies:
   flutter_custom_clippers: ^2.0.0
   wave_progress_bars: ^0.1.0
   provider: ^5.0.0-nullsafety.5
+  share_plus: ^3.0.4
+  flutter_downloader: ^1.7.1
+  path_provider: ^2.0.6
+  permission_handler: ^8.2.6
+  image_picker: ^0.8.4+4
   
 
 dev_dependencies:
@@ -64,6 +69,7 @@ flutter:
   assets:
     - assets/
     - assets/sound_audio.mp3
+    - assets/pushto_audios/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

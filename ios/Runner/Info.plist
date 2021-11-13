@@ -42,4 +42,17 @@
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 </dict>
+<key>NSAppTransportSecurity</key>
+<dict>
+    <key>NSAllowsArbitraryLoads</key>
+    <true/>
+<key>NSPhotoLibraryUsageDescription</key>
+<string>Allow access to photo library</string>
+
+<key>NSCameraUsageDescription</key>
+<string>Allow access to camera to capture photos</string>
+
+<key>NSMicrophoneUsageDescription</key>
+<string>Allow access to microphone</string>
+</dict>
 </plist>

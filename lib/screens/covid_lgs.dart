@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lgs_audiopedia/common/contact_drawer.dart';
 import 'package:lgs_audiopedia/common/custom_drawer.dart';
 import 'package:lgs_audiopedia/common/custom_end_drawer.dart';
 import 'package:lgs_audiopedia/common/header.dart';
@@ -14,7 +15,7 @@ class CovidLgs extends StatelessWidget {
     final _scaffoldKey = GlobalKey<ScaffoldState>();
     return Scaffold(
         key: _scaffoldKey,
-        drawer: CustomEndDrawer(),
+        drawer: ContactDrawer(),
         backgroundColor: Color(0xff35016D),
         body: Stack(
           children: [
@@ -51,19 +52,27 @@ class CovidLgs extends StatelessWidget {
                       children: [
                         GestureDetector(
                           onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (ctx) => VillageCounsel()));
+                            // Navigator.push(
+                            //     context,
+                            //     MaterialPageRoute(
+                            //         builder: (ctx) => VillageCounsel()));
                           },
                           child: Image.asset(
                             'assets/lg.png',
                             fit: BoxFit.contain,
                           ),
                         ),
-                        Image.asset(
-                          'assets/covid19.png',
-                          fit: BoxFit.contain,
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (ctx) => VillageCounsel()));
+                          },
+                          child: Image.asset(
+                            'assets/covid19.png',
+                            fit: BoxFit.contain,
+                          ),
                         ),
                         Image.asset(
                           'assets/general.png',
