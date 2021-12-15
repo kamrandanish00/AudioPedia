@@ -22,14 +22,14 @@ class _LocalizationSystemPageState extends State<LocalizationSystemPage> {
             LanguagePickerWidget(),
             LanguageWidget(),
             Text(
-              AppLocalizations.of(context)!.title,
+              AppLocalizations.of(context)!.address,
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
               ),
             ),
             Text(
-              AppLocalizations.of(context)!.descript,
+              AppLocalizations.of(context)!.complaint_department,
               style: TextStyle(
                 fontSize: 25,
                 fontWeight: FontWeight.bold,

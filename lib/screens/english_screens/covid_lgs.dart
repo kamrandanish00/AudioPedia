@@ -23,31 +23,11 @@ class CovidLgs extends StatelessWidget {
             Column(
               children: [
                 Header(),
-                // Spacer(),
-                // InkWell(
-                //   onTap: () {
-                //     Navigator.push(context,
-                //         MaterialPageRoute(builder: (ctx) => VillageCounsel()));
-                //   },
-                //   child: BtnContainer(
-                //     txt: 'LG',
-                //   ),
-                // ),
-                // SizedBox(
-                //   height: height * 0.04,
-                // ),
-                // BtnContainer(
-                //   txt: 'COVID 19',
-                // ),
-                // Spacer(),
+
                 Expanded(
                   child: Container(
                     height: height * 0.6,
                     width: width * 0.35,
-                    // decoration: BoxDecoration(
-                    //   borderRadius: BorderRadius.circular(30),
-                    //   border: Border.all(color: Colors.white),
-                    // ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [

@@ -47,6 +47,7 @@ dependencies:
   path_provider: ^2.0.6
   permission_handler: ^8.2.6
   image_picker: ^0.8.4+4
+  google_fonts: ^2.1.0
   
 
 dev_dependencies:
@@ -68,8 +69,16 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/
-    - assets/sound_audio.mp3
+    # - assets/sound_audio.mp3
     - assets/pushto_audios/
+    - assets/urdo_audios/lg_urdo_audios/
+    # - assets/covid_urdo_audios/
+    # - assets/pushto_audios/pashto_covid_audios/
+    - assets/pushto_audios/covid_pashto_audios/
+    - assets/pushto_audios/lg_pashto_audios/
+
+    - assets/urdo_audios/lg_urdo_audios/
+    - assets/urdo_audios/urdo_covid_audios/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

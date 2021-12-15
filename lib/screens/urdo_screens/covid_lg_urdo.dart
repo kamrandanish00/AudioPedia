@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:lgs_audiopedia/common/contact_drawer.dart';
 import 'package:lgs_audiopedia/common/custom_drawer.dart';
 import 'package:lgs_audiopedia/common/custom_end_drawer.dart';
 import 'package:lgs_audiopedia/common/header.dart';
+import 'package:lgs_audiopedia/l10n/localization/provider/locale_provider.dart';
+import 'package:lgs_audiopedia/screens/urdo_screens/lg_urdo_screens/tehsil_counsel_lg_urdo.dart';
+import 'package:lgs_audiopedia/screens/urdo_screens/lg_urdo_screens/village_counsel_lg_urdo.dart';
 import 'package:lgs_audiopedia/screens/urdo_screens/tehsil_counsel_urdo.dart';
 import 'package:lgs_audiopedia/screens/english_screens/village_counsel.dart';
+import 'package:lgs_audiopedia/screens/urdo_screens/urdo_common/CustomEndDrawerUrdo.dart';
+import 'package:provider/provider.dart';
 
 class CovidLgUrdo extends StatelessWidget {
   const CovidLgUrdo({Key? key}) : super(key: key);
@@ -12,10 +18,13 @@ class CovidLgUrdo extends StatelessWidget {
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
+    //for localization
+    final provider = Provider.of<LocaleProvider>(context);
+    final locale = provider.locale ?? Locale('en');
     final _scaffoldKey = GlobalKey<ScaffoldState>();
     return Scaffold(
         key: _scaffoldKey,
-        drawer: CustomEndDrawer(),
+        drawer: ContactDrawer(),
         backgroundColor: Color(0xff35016D),
         body: Stack(
           children: [
@@ -38,49 +47,51 @@ class CovidLgUrdo extends StatelessWidget {
                 // BtnContainer(
                 //   txt: 'COVID 19',
                 // ),
-                Spacer(),
-                Container(
-                  height: height * 0.6,
-                  width: width * 0.35,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    // border: Border.all(color: Colors.white),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      GestureDetector(
-                        onTap: () {
-                          // Navigator.push(
-                          //     context,
-                          //     MaterialPageRoute(
-                          //         builder: (ctx) => TehsilCounselUrdo()));
-                        },
-                        child: Image.asset(
-                          'assets/lg_urdo.png',
+                // Spacer(),
+                Expanded(
+                  child: Container(
+                    height: height * 0.6,
+                    width: width * 0.35,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      // border: Border.all(color: Colors.white),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (ctx) => VillageCounselLGUrdo()));
+                          },
+                          child: Image.asset(
+                            'assets/lg_urdo.png',
+                            fit: BoxFit.contain,
+                          ),
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (ctx) => TehsilCounselUrdo()));
+                          },
+                          child: Image.asset(
+                            'assets/covid_urdo.png',
+                            fit: BoxFit.contain,
+                          ),
+                        ),
+                        Image.asset(
+                          'assets/general_urdo.png',
                           fit: BoxFit.contain,
                         ),
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (ctx) => TehsilCounselUrdo()));
-                        },
-                        child: Image.asset(
-                          'assets/covid_urdo.png',
-                          fit: BoxFit.contain,
-                        ),
-                      ),
-                      Image.asset(
-                        'assets/general_urdo.png',
-                        fit: BoxFit.contain,
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
-                Spacer(),
+                // Spacer(),
               ],
             ),
             Positioned(

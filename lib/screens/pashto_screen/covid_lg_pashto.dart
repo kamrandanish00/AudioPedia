@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:lgs_audiopedia/common/contact_drawer.dart';
 import 'package:lgs_audiopedia/common/custom_drawer.dart';
 import 'package:lgs_audiopedia/common/custom_end_drawer.dart';
 import 'package:lgs_audiopedia/common/header.dart';
+import 'package:lgs_audiopedia/screens/pashto_screen/lg_pashto_topics_list.dart';
 import 'package:lgs_audiopedia/screens/pashto_screen/village_counsel_pashto.dart';
 import 'package:lgs_audiopedia/screens/english_screens/village_counsel.dart';
 
@@ -15,7 +17,7 @@ class CovidLgPashto extends StatelessWidget {
     final _scaffoldKey = GlobalKey<ScaffoldState>();
     return Scaffold(
         key: _scaffoldKey,
-        drawer: CustomEndDrawer(),
+        drawer: ContactDrawer(),
         backgroundColor: Color(0xff35016D),
         body: Stack(
           children: [
@@ -38,49 +40,51 @@ class CovidLgPashto extends StatelessWidget {
                 // BtnContainer(
                 //   txt: 'COVID 19',
                 // ),
-                Spacer(),
-                Container(
-                  height: height * 0.6,
-                  width: width * 0.35,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    // border: Border.all(color: Colors.white),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      GestureDetector(
-                        onTap: () {
-                          // Navigator.push(
-                          //     context,
-                          //     MaterialPageRoute(
-                          //         builder: (ctx) => VillageCounselPashto()));
-                        },
-                        child: Image.asset(
-                          'assets/lg_pashto.png',
+                // Spacer(),
+                Expanded(
+                  child: Container(
+                    height: height * 0.6,
+                    width: width * 0.35,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      // border: Border.all(color: Colors.white),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (ctx) => TopicsLGPashto()));
+                          },
+                          child: Image.asset(
+                            'assets/lg_pashto.png',
+                            fit: BoxFit.contain,
+                          ),
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (ctx) => VillageCounselPashto()));
+                          },
+                          child: Image.asset(
+                            'assets/covid_urdo.png',
+                            fit: BoxFit.contain,
+                          ),
+                        ),
+                        Image.asset(
+                          'assets/general_urdo.png',
                           fit: BoxFit.contain,
                         ),
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (ctx) => VillageCounselPashto()));
-                        },
-                        child: Image.asset(
-                          'assets/covid_urdo.png',
-                          fit: BoxFit.contain,
-                        ),
-                      ),
-                      Image.asset(
-                        'assets/general_urdo.png',
-                        fit: BoxFit.contain,
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
-                Spacer(),
+                // Spacer(),
               ],
             ),
             Positioned(

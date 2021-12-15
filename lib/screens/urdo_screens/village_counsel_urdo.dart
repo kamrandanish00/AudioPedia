@@ -92,7 +92,7 @@ class VillageCounselUrdo extends StatelessWidget {
           left: width * 0.36,
           child: InkWell(
             onTap: () {
-              Navigator.push(
+              Navigator.pushReplacement(
                   context, MaterialPageRoute(builder: (ctx) => TopicsUrdo()));
             },
             child: Container(

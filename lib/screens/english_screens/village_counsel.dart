@@ -133,9 +133,9 @@ class VillageCounsel extends StatelessWidget {
           //     ),
           //   ),
           // ),
-          child: InkWell(
+          child: GestureDetector(
             onTap: () {
-              Navigator.push(context,
+              Navigator.pushReplacement(context,
                   MaterialPageRoute(builder: (ctx) => TehsilCounsel()));
             },
             child: Container(

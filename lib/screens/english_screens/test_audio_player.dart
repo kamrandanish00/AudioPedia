@@ -1,10 +1,18 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:share_plus/share_plus.dart';
+//imports for downloading
+import 'package:flutter_downloader/flutter_downloader.dart';
+import 'package:path_provider/path_provider.dart';
+import 'package:permission_handler/permission_handler.dart';
+import 'dart:isolate';
+import 'dart:ui';
 
 class TextAudioPlayer extends StatefulWidget {
   final String? audioPath;
-  const TextAudioPlayer({Key? key, this.audioPath}) : super(key: key);
+  final String? txtContents;
+  const TextAudioPlayer({Key? key, this.audioPath, this.txtContents})
+      : super(key: key);
 
   @override
   _TextAudioPlayerState createState() => _TextAudioPlayerState();
@@ -16,6 +24,19 @@ class _TextAudioPlayerState extends State<TextAudioPlayer> {
 
   // add it to your class as a static member
   // static AudioCache player = AudioCache();
+
+  //Downloading audio
+  int progress = 0;
+  var taskId;
+  ReceivePort _receivePort = ReceivePort();
+
+  static downloadingCallBack(id, status, progress) {
+    //looking up for a send port
+    SendPort? sendPort = IsolateNameServer.lookupPortByName('downloading');
+    //sending the data
+    sendPort!.send([id, status, progress]);
+  }
+  //downloading logi ends
 
   // or as a local variable
   // final player = AudioCache(prefix: 'assets/');
@@ -51,11 +72,21 @@ class _TextAudioPlayerState extends State<TextAudioPlayer> {
   @override
   void initState() {
     super.initState();
-    // this.widget.advancedPlayer!.onDurationChanged.listen((d) {
-    //   setState(() {
-    //     _duration = d;
-    //   });
-    // });
+    //for downloading
+    //register a send port for the other isolates
+    IsolateNameServer.registerPortWithName(
+        _receivePort.sendPort, 'downloading');
+
+    //listening for data thats comming from other isolates
+    _receivePort.listen((message) {
+      setState(() {
+        progress = message[2];
+      });
+      print('This is the progress value: $progress');
+    });
+    FlutterDownloader.registerCallback(downloadingCallBack);
+
+    //downloading ends
 
     //new code from florian prumer channel
     audioCache = AudioCache(fixedPlayer: audioPlayer);
@@ -119,47 +150,74 @@ class _TextAudioPlayerState extends State<TextAudioPlayer> {
     audioCache!.clear(Uri.parse(widget.audioPath!));
   }
 
+  // Widget btnStart() {
+  //   //isPlaying = bool;
+  //   return IconButton(
+  //       // alignment: Alignment.center,
+  //       // padding: EdgeInsets.only(left: 10, right: 30),
+  //       onPressed: () {
+  //         if (isPlaying == false) {
+  //           // this.widget.advancedPlayer!.play(path);
+  //           // audioPlayer.play(path);
+  //           // audioCache!.play(path);
+  //           audioCache!.play(widget.audioPath!);
+  //           setState(() {
+  //             isPlaying = true;
+  //           });
+  //         } else if (isPlaying == true) {
+  //           // this.widget.advancedPlayer!.pause();
+  //           audioPlayer.pause();
+
+  //           setState(() {
+  //             isPlaying = false;
+  //           });
+  //         }
+  //         // if (isPlaying == false) {
+  //         //   // this.widget.advancedPlayer!.play(path);
+  //         //   // audioPlayer.play(path);
+  //         //   audioCache!.play(path);
+
+  //         //   setState(() {
+  //         //     isPaused = false;
+  //         //     _pauseColor = Colors.black;
+  //         //     _playingColor = Color(0xff35016D);
+  //         //     isStopped = false;
+  //         //   });
+  //         // }
+  //       },
+  //       icon: Icon(
+  //         isPlaying == true ? _icons[1] : _icons[0],
+  //         // Icons.play_circle_fill,
+  //         // color: _playingColor,
+  //         color: Color(0xff35096D),
+  //         size: 50,
+  //         // color: Color(0xff35096D),
+  //       ));
+  // }
+
+  //new btnStart button
   Widget btnStart() {
-    //isPlaying = bool;
     return IconButton(
-        alignment: Alignment.center,
-        padding: EdgeInsets.only(left: 10, right: 30),
         onPressed: () {
           if (isPlaying == false) {
-            // this.widget.advancedPlayer!.play(path);
-            // audioPlayer.play(path);
-            // audioCache!.play(path);
             audioCache!.play(widget.audioPath!);
             setState(() {
               isPlaying = true;
             });
           } else if (isPlaying == true) {
-            // this.widget.advancedPlayer!.pause();
             audioPlayer.pause();
 
             setState(() {
               isPlaying = false;
             });
           }
-          // if (isPlaying == false) {
-          //   // this.widget.advancedPlayer!.play(path);
-          //   // audioPlayer.play(path);
-          //   audioCache!.play(path);
-
-          //   setState(() {
-          //     isPaused = false;
-          //     _pauseColor = Colors.black;
-          //     _playingColor = Color(0xff35016D);
-          //     isStopped = false;
-          //   });
-          // }
         },
         icon: Icon(
           isPlaying == true ? _icons[1] : _icons[0],
           // Icons.play_circle_fill,
           // color: _playingColor,
           color: Color(0xff35096D),
-          size: 50,
+          size: 35,
           // color: Color(0xff35096D),
         ));
   }
@@ -167,11 +225,13 @@ class _TextAudioPlayerState extends State<TextAudioPlayer> {
   Widget loadAsset() {
     return Row(
       // crossAxisAlignment: CrossAxisAlignment.center,
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      // crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         btnDownload(),
         // btnPause(),
         btnPrevious(),
+        // btnStart(),
         btnStart(),
         btnNext(),
         // btnStop(),
@@ -274,21 +334,24 @@ class _TextAudioPlayerState extends State<TextAudioPlayer> {
 
   Widget btnDownload() {
     return IconButton(
-      onPressed: () {
-        if (isRepeat == false) {
-          // this.widget.advancedPlayer!.setReleaseMode(ReleaseMode.LOOP);
-          //new code
-          audioPlayer.setReleaseMode(ReleaseMode.LOOP);
-          setState(() {
-            isRepeat = true;
-            // _color = Colors.blue;
-          });
-        } else if (isRepeat == true) {
-          // this.widget.advancedPlayer!.setReleaseMode(ReleaseMode.RELEASE);
-          //new code
-          audioPlayer.setReleaseMode(ReleaseMode.RELEASE);
-          // _color = Colors.black;
-          isRepeat = false;
+      onPressed: () async {
+        final status = await Permission.storage.request();
+
+        if (status.isGranted) {
+          final externalDir = await getExternalStorageDirectory();
+
+          taskId = await FlutterDownloader.enqueue(
+            // url: "${widget.audioPath}",
+            url: 'https://nature.berkeley.edu/ucce50/ag-labor/english/000c.zip',
+            savedDir: externalDir!.path,
+            fileName: 'audio $taskId',
+            showNotification: true,
+            openFileFromNotification: true,
+            saveInPublicStorage: true,
+          );
+          print('audio url ===== $taskId');
+        } else {
+          print('Permission denied!');
         }
       },
       icon: Container(
@@ -312,20 +375,40 @@ class _TextAudioPlayerState extends State<TextAudioPlayer> {
   //widget for next button
   Widget btnPrevious() {
     return IconButton(
-      onPressed: null,
-      icon: Image.asset('assets/previous.png'),
-      // iconSize: 10,
+      onPressed: () {
+        setState(() {
+          if (_position <= _duration) {
+            _position += Duration(seconds: -10);
+            final result = _position;
+            changeToSecond(result.inSeconds);
+          }
+        });
+        // int result = await audioPlayer.seek(Duration(milliseconds: 1200));
+      },
+      icon: Image.asset(
+        'assets/previous.png',
+        // excludeFromSemantics: true,
+        matchTextDirection: true,
+      ),
+      iconSize: 10,
     );
   }
 
   Widget btnNext() {
     return IconButton(
-      onPressed: null,
+      onPressed: () {
+        setState(() {
+          _position += Duration(seconds: 10);
+          final result = _position;
+          changeToSecond(result.inSeconds);
+        });
+      },
       icon: Image.asset(
         'assets/next.png',
-        fit: BoxFit.fitHeight,
+        matchTextDirection: true,
+        // fit: BoxFit.fitHeight,
       ),
-      // iconSize: 10,
+      // iconSize: 20,
     );
   }
 
@@ -340,7 +423,10 @@ class _TextAudioPlayerState extends State<TextAudioPlayer> {
           // Share.share('this is');
           // Share.shareFiles(['assets/audioButoon.png'], text: 'Great picture');
           // Share.share('check out my audio $path');
-          Share.share('Check out this ${widget.audioPath!}');
+          //this is the second latest
+          // Share.share('Check out this ${widget.audioPath!}');
+          //this is latest
+          Share.share('Check out this ${widget.txtContents!}');
         }
 
         // Share.shareFiles(path, text: 'Great picture');

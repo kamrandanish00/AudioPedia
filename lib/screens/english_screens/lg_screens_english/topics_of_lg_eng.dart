@@ -2,6 +2,7 @@ import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:lgs_audiopedia/data/english_data/lg_data_english/lg_data_english.dart';
 import 'package:lgs_audiopedia/model/topic.dart';
+import 'package:lgs_audiopedia/screens/english_screens/covid_lgs.dart';
 import 'package:lgs_audiopedia/screens/english_screens/introduction_local_government.dart';
 
 import '../search_widget.dart';
@@ -64,6 +65,7 @@ class _TopicsOfLGEngState extends State<TopicsOfLGEng> {
 
     double screenWidth = MediaQuery.of(context).size.width;
     double screenHeight = MediaQuery.of(context).size.width;
+    final fontSize = MediaQuery.of(context).textScaleFactor;
     final _scaffoldKey = GlobalKey<ScaffoldState>();
     Path customPath = Path()
       ..moveTo(40, 1)
@@ -81,8 +83,10 @@ class _TopicsOfLGEngState extends State<TopicsOfLGEng> {
             decoration: BoxDecoration(
                 // color: Color(0xff35016D),
                 ),
-            margin: EdgeInsets.symmetric(
-                vertical: MediaQuery.of(context).size.height * 0.04),
+            margin: EdgeInsets.only(
+              top: MediaQuery.of(context).size.height * 0.04,
+              bottom: MediaQuery.of(context).size.height * 0.02,
+            ),
             alignment: Alignment.center,
             height: screenHeight * 0.17,
             // width: width * 0.5,
@@ -99,6 +103,8 @@ class _TopicsOfLGEngState extends State<TopicsOfLGEng> {
               IconButton(
                 onPressed: () {
                   Navigator.of(context).pop();
+                  // Navigator.of(context).pushReplacement(
+                  //     MaterialPageRoute(builder: (ctx) => CovidLgs()));
                 },
                 icon: Icon(Icons.arrow_back),
                 color: Color(0xff35016D),
@@ -111,9 +117,10 @@ class _TopicsOfLGEngState extends State<TopicsOfLGEng> {
               Expanded(
                 // fit: BoxFit.contain,
                 child: Text(
-                  topicData[0].title,
+                  // topicData[0].title,
+                  'FATA DEVELOPMENT PROGRAMME \nGIZ',
                   style: TextStyle(
-                    fontSize: MediaQuery.of(context).textScaleFactor * 30,
+                    fontSize: MediaQuery.of(context).textScaleFactor * 17,
                     fontWeight: FontWeight.bold,
                     color: Color(0xff35016D),
                     // overflow: TextOverflow.clip,
@@ -141,63 +148,124 @@ class _TopicsOfLGEngState extends State<TopicsOfLGEng> {
                   // final topic = topics![index];
                   final topic = topicData[index];
 
+                  // return Padding(
+                  //   padding: const EdgeInsets.fromLTRB(0, 0, 0, 10),
+                  //   child: GestureDetector(
+                  //     onTap: () {
+                  //       Navigator.of(context).push(
+                  //         MaterialPageRoute(
+                  //           builder: (ctx) => IntroductionToLocalGovernment(
+                  //               dataTopics: topicData[index]),
+                  //         ),
+                  //       );
+                  //     },
+                  //     child: Center(
+                  //       child: Stack(
+                  //         children: [
+                  //           Positioned(
+                  //             child: DottedBorder(
+                  //               // padding: EdgeInsets.symmetric(horizontal: 20),
+                  //               customPath: (size) => customPath, // PathBuilder
+                  //               color: Colors.indigo,
+                  //               dashPattern: [8, 4],
+                  //               strokeWidth: 2,
+                  //               child: Container(
+                  //                 margin: EdgeInsets.only(left: 60, right: 40),
+                  //                 alignment: Alignment.centerLeft,
+                  //                 height: 50,
+                  //                 width: 260,
+                  //                 // color: Colors.green,
+                  //                 child: Text(
+                  //                   topicData[index].title,
+                  //                   style: TextStyle(
+                  //                     fontSize: 15,
+                  //                     fontWeight: FontWeight.bold,
+                  //                   ),
+                  //                 ),
+                  //               ),
+                  //             ),
+                  //           ),
+                  //           Positioned(
+                  //             child: ClipPath(
+                  //               clipper: MyCustomClipper(),
+                  //               child: Container(
+                  //                   alignment: Alignment.center,
+                  //                   height: 52,
+                  //                   width: 50,
+                  //                   color: Color(0xff35096D),
+                  //                   child: Text(
+                  //                     topicData[index].id.toString(),
+                  //                     style: TextStyle(
+                  //                       fontSize: 24,
+                  //                       fontWeight: FontWeight.bold,
+                  //                       color: Colors.white,
+                  //                     ),
+                  //                   )),
+                  //             ),
+                  //           )
+                  //         ],
+                  //       ),
+                  //     ),
+                  //   ),
+                  // );
+                  //new design for listview.builder
                   return Padding(
-                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 10),
+                    padding: EdgeInsets.symmetric(
+                        horizontal: screenWidth * 0.05,
+                        vertical: screenHeight * 0.016),
                     child: GestureDetector(
                       onTap: () {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
+                        Navigator.of(context).push(MaterialPageRoute(
                             builder: (ctx) => IntroductionToLocalGovernment(
-                                dataTopics: topicData[index]),
-                          ),
-                        );
+                                dataTopics: topicData[index])));
                       },
-                      child: Center(
-                        child: Stack(
-                          children: [
-                            Positioned(
-                              child: DottedBorder(
-                                // padding: EdgeInsets.symmetric(horizontal: 20),
-                                customPath: (size) => customPath, // PathBuilder
-                                color: Colors.indigo,
-                                dashPattern: [8, 4],
-                                strokeWidth: 2,
-                                child: Container(
-                                  margin: EdgeInsets.only(left: 60, right: 40),
-                                  alignment: Alignment.centerLeft,
-                                  height: 50,
-                                  width: 260,
-                                  // color: Colors.green,
-                                  child: Text(
-                                    topicData[index].title,
-                                    style: TextStyle(
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
+                      child: Row(
+                        children: [
+                          Flexible(
+                            flex: 1,
+                            child: Container(
+                              alignment: Alignment.center,
+                              // height: screenHeight * 0.0517,
+                              // width: 40,
+                              height: screenHeight * 0.14,
+                              decoration: BoxDecoration(
+                                color: Color(0xff35096D),
+                              ),
+                              child: Text(
+                                topicData[index].id.toString(),
+                                style: TextStyle(
+                                  fontSize: fontSize * 20,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
                                 ),
                               ),
                             ),
-                            Positioned(
-                              child: ClipPath(
-                                clipper: MyCustomClipper(),
-                                child: Container(
-                                    alignment: Alignment.center,
-                                    height: 52,
-                                    width: 50,
-                                    color: Color(0xff35096D),
-                                    child: Text(
-                                      topicData[index].id.toString(),
-                                      style: TextStyle(
-                                        fontSize: 24,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.white,
-                                      ),
-                                    )),
+                          ),
+                          Expanded(
+                            flex: 4,
+                            child: Container(
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: screenWidth * 0.02),
+                              alignment: Alignment.centerLeft,
+                              // height: 40,
+                              height: screenHeight * 0.14,
+                              // width: 200,
+                              decoration: BoxDecoration(
+                                // color: Colors.purple,
+                                border:
+                                    Border.all(color: Colors.black, width: 2),
                               ),
-                            )
-                          ],
-                        ),
+                              child: Text(
+                                topicData[index].title,
+                                style: TextStyle(
+                                  fontSize: fontSize * 14,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                                // textAlign: TextAlign.right,
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   );
@@ -207,11 +275,11 @@ class _TopicsOfLGEngState extends State<TopicsOfLGEng> {
           ),
 
           SizedBox(height: MediaQuery.of(context).size.height * 0.04),
-          FittedBox(
-            fit: BoxFit.contain,
-            alignment: Alignment.topCenter,
-            child: Text('Powered by @ IT Artificer'),
-          ),
+          // FittedBox(
+          //   fit: BoxFit.contain,
+          //   alignment: Alignment.topCenter,
+          //   child: Text('Powered by @ IT Artificer'),
+          // ),
           // Spacer(),
         ],
       ),

@@ -86,9 +86,9 @@ class TehsilCounselPashto extends StatelessWidget {
             bottom: height * 0.15,
             left: width * 0.3,
             right: width * 0.3,
-            child: InkWell(
+            child: GestureDetector(
               onTap: () {
-                Navigator.push(context,
+                Navigator.pushReplacement(context,
                     MaterialPageRoute(builder: (ctx) => TopicsPashto()));
               },
               child: Container(

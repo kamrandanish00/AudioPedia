@@ -1,12 +1,16 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:lgs_audiopedia/l10n/localization/provider/locale_provider.dart';
+import 'package:provider/provider.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    // final provider = Provider.of<LocaleProvider>(context, listen: false);
+    // provider.setLocale(Locale('en'));
     return Drawer(
       child: Container(
         height: double.infinity,

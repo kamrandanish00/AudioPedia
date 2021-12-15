@@ -32,6 +32,7 @@ class ContactDrawer extends StatelessWidget {
             Spacer(),
             GestureDetector(
               onTap: () {
+                Navigator.of(context).pop();
                 Navigator.of(context)
                     .push(MaterialPageRoute(builder: (ctx) => FeedbackForm()));
               },
@@ -50,6 +51,7 @@ class ContactDrawer extends StatelessWidget {
             ),
             ListTile(
               onTap: () {
+                Navigator.of(context).pop();
                 Navigator.of(context).push(
                     MaterialPageRoute(builder: (ctx) => ContactDetails()));
               },
@@ -91,43 +93,43 @@ class ContactDrawer extends StatelessWidget {
             Spacer(
               flex: 5,
             ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Text(
-                  'Version: 1.0.0',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 12,
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
-                Text(
-                  'Your #1 source for all the crossplatform devs',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 12,
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
-                Text(
-                  'by Kamran Ahmad',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 12,
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
-                Text(
-                  'Privacy policy | Terms & Conditions',
-                  style: TextStyle(
-                    color: Colors.white,
-                  ),
-                ),
-              ],
-            ),
-            Spacer(),
+            // Column(
+            //   mainAxisAlignment: MainAxisAlignment.end,
+            //   crossAxisAlignment: CrossAxisAlignment.center,
+            //   children: [
+            //     Text(
+            //       'Version: 1.0.0',
+            //       style: TextStyle(
+            //         color: Colors.white,
+            //         fontSize: 12,
+            //         fontWeight: FontWeight.w500,
+            //       ),
+            //     ),
+            //     Text(
+            //       'Your #1 source for all the crossplatform devs',
+            //       style: TextStyle(
+            //         color: Colors.white,
+            //         fontSize: 12,
+            //         fontWeight: FontWeight.w500,
+            //       ),
+            //     ),
+            //     Text(
+            //       'by Kamran Ahmad',
+            //       style: TextStyle(
+            //         color: Colors.white,
+            //         fontSize: 12,
+            //         fontWeight: FontWeight.w500,
+            //       ),
+            //     ),
+            //     Text(
+            //       'Privacy policy | Terms & Conditions',
+            //       style: TextStyle(
+            //         color: Colors.white,
+            //       ),
+            //     ),
+            //   ],
+            // ),
+            // Spacer(),
           ],
         ),
       ),

@@ -1,8 +1,26 @@
-{
-    "id": "1",
-    
-    "title": "Covid",
-    
-    "descript": "Covid description is here."
+{   
+    "feedback_form": "Feedback Form",
+    "name": "Name",
+    "enter_your_name": "Enter Your Name",
+    "contact_no": "Contact No",
+    "enter_your_contact_no": "Enter Your Contat Number",
+    "complaint_department": "Complaint Department",
+    "enter_complaint_department": "Enter Complaint Department",
+    "nature_of_complaint": "Nature Of Complaint",
+    "enter_complaint_nature": "Enter Complaint Nature",
+    "complaint_details": "Complaint Details",
+    "provide_complaint_details": "Provide Complaint Details",
+    "address": "Address",
+    "enter_your_address": "Enter Your Address",
+    "province": "Province",
+    "district": "District",
+    "tehsil": "Tehsil",
+    "picture": "Picture",
+    "upload_file": "Upload File",
+    "send": "Send",
+    "contact_lg": "Contact Locale Government",
+    "contact_ncoc": "Contact NCOC",
+    "contact_kp_healt": "Contact KP Health",
+    "contact_health": "Contact Health"
     
 }

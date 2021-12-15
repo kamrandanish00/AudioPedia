@@ -1,6 +1,25 @@
-{   "id": "1",
-    "title": "کوویڈ بیماری",
-    "descript": "کوویڈ بیماری کی تفصیل یہاں ہے۔"
-    
+{   
+    "feedback_form": "رائے فارم",
+    "name": "نام",
+    "enter_your_name": "اپنا نام درج کریں",
+    "contact_no": "رابطے کا نمبر",
+    "enter_your_contact_no": "اپنا رابطہ نمبر درج کریں۔",   
+    "complaint_department": "محکمہ شکایت",
+    "enter_complaint_department": "شکایت کا شعبہ داخل کریں۔",
+    "nature_of_complaint": "شکایت کی نوعیت",
+    "enter_complaint_nature": "شکایت کی نوعیت درج کریں۔",
+    "complaint_details": "شکایت کی تفصیلات",
+    "provide_complaint_details": "شکایت کی تفصیلات فراہم کریں۔",
+    "address": "پتہ",
+    "enter_your_address": "اپنا پتہ درج کریں۔",
+    "province": "صوبہ",
+    "district": "ضلع",
+    "tehsil": "تحصیل",
+    "picture": "تصویر",
+    "upload_file": "اپ لوڈ فائل",
+    "send": "بھیجیں",
+    "contact_lg": "مقامی حکومت سے رابطہ کریں۔",
+    "contact_ncoc": "این سی او سی سے رابطہ کریں۔",
+    "contact_kp_healt": "کے پی ہیلتھ سے رابطہ کریں۔",
+    "contact_health": "محکمہ صحت سے رابطہ کریں۔"
 }
-

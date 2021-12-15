@@ -118,9 +118,9 @@ class TehsilCounselDengueEng extends StatelessWidget {
             //     ),
             //   ),
             // ),
-            child: InkWell(
+            child: GestureDetector(
               onTap: () {
-                Navigator.push(
+                Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(builder: (ctx) => TopicsOfDengueEng()),
                 );

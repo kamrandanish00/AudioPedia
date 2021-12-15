@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:lgs_audiopedia/common/header.dart';
 import 'package:lgs_audiopedia/screens/english_screens/topics.dart';
+import 'package:lgs_audiopedia/screens/urdo_screens/topics_urdo.dart';
 import 'package:lgs_audiopedia/screens/urdo_screens/village_counsel_urdo.dart';
 
 class TehsilCounselUrdo extends StatelessWidget {
@@ -20,11 +21,11 @@ class TehsilCounselUrdo extends StatelessWidget {
           Container(
             margin: EdgeInsets.only(top: height / 5.5),
             // height: ,
-            width: width * 1,
-            height: height * 0.855,
+            width: double.infinity,
+            height: double.infinity,
             child: Image.asset(
               'assets/tehsilcounsel.png',
-              fit: BoxFit.contain,
+              fit: BoxFit.fill,
             ),
           ),
           // SizedBox(height: 200),
@@ -43,12 +44,15 @@ class TehsilCounselUrdo extends StatelessWidget {
             ),
           ),
           Positioned(
-            top: height / 1.1445,
+            // top: height / 1.1445,
+            bottom: 0,
+            left: 0,
+            right: 0,
             child: Container(
               height: height / 8,
 
               // width: double.infinity,
-              width: width,
+              // width: width,
               decoration: BoxDecoration(
                 // color: Color(0xff35016D),
                 color: Colors.white,
@@ -60,27 +64,21 @@ class TehsilCounselUrdo extends StatelessWidget {
               child: Row(
                 children: [
                   Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 8),
-                      child: Container(
-                        // height: height / 10,
-                        child: Image.asset(
-                          'assets/germanCooperation.png',
-                        ),
+                    child: Container(
+                      // height: height / 10,
+                      child: Image.asset(
+                        'assets/germanCooperation.png',
                       ),
                     ),
                   ),
-                  SizedBox(
-                    width: width / 100,
-                  ),
+                  // SizedBox(
+                  //   width: width / 100,
+                  // ),
                   Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.only(right: 8),
-                      child: Container(
-                        // height: height / 10,
-                        child: Image.asset(
-                          'assets/kpkgovernment.png',
-                        ),
+                    child: Container(
+                      // height: height / 10,
+                      child: Image.asset(
+                        'assets/kpkgovernment.png',
                       ),
                     ),
                   )
@@ -90,7 +88,8 @@ class TehsilCounselUrdo extends StatelessWidget {
           ),
           Positioned(
             bottom: height * 0.15,
-            left: width * 0.36,
+            left: width * 0.3,
+            right: width * 0.3,
             // child: InkWell(
             //   onTap: () {
             //     Navigator.push(
@@ -125,8 +124,8 @@ class TehsilCounselUrdo extends StatelessWidget {
             // ),
             child: InkWell(
               onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (ctx) => VillageCounselUrdo()));
+                Navigator.pushReplacement(
+                    context, MaterialPageRoute(builder: (ctx) => TopicsUrdo()));
               },
               child: Container(
                 alignment: Alignment.center,
@@ -142,7 +141,7 @@ class TehsilCounselUrdo extends StatelessWidget {
                 child: Text(
                   'جاری رکھیں',
                   style: TextStyle(
-                    fontSize: 14,
+                    fontSize: MediaQuery.of(context).textScaleFactor * 14,
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
                   ),

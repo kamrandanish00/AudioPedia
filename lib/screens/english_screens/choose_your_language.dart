@@ -4,10 +4,12 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 // import 'package:lgs_audiopedia/common/custom_drawer.dart';
 import 'package:lgs_audiopedia/common/custom_end_drawer.dart';
 import 'package:lgs_audiopedia/common/header.dart';
+import 'package:lgs_audiopedia/l10n/localization/provider/locale_provider.dart';
 import 'package:lgs_audiopedia/main.dart';
 import 'package:lgs_audiopedia/screens/english_screens/covid_lgs.dart';
 import 'package:lgs_audiopedia/screens/pashto_screen/covid_lg_pashto.dart';
 import 'package:lgs_audiopedia/screens/urdo_screens/covid_lg_urdo.dart';
+import 'package:provider/provider.dart';
 
 class ChooseYourLanguage extends StatefulWidget {
   const ChooseYourLanguage({Key? key}) : super(key: key);
@@ -86,6 +88,9 @@ class _ChooseYourLanguageState extends State<ChooseYourLanguage> {
 
   @override
   Widget build(BuildContext context) {
+    //fol localization
+    final provider = Provider.of<LocaleProvider>(context, listen: true);
+    // provider.setLocale(Locale('en'));
     final height = MediaQuery.of(context).size.height;
     final widht = MediaQuery.of(context).size.width;
     return Scaffold(
@@ -104,9 +109,13 @@ class _ChooseYourLanguageState extends State<ChooseYourLanguage> {
             children: [
               Header(),
               Spacer(),
-              InkWell(
-                borderRadius: BorderRadius.circular(15),
+              GestureDetector(
+                // borderRadius: BorderRadius.circular(15),
                 onTap: () {
+                  // provider.setLocale(Locale('eng'));
+                  final provider =
+                      Provider.of<LocaleProvider>(context, listen: false);
+                  provider.setLocale(Locale('en'));
                   Navigator.push(
                       context, MaterialPageRoute(builder: (ctx) => CovidLgs()));
                 },
@@ -117,6 +126,11 @@ class _ChooseYourLanguageState extends State<ChooseYourLanguage> {
               ),
               GestureDetector(
                   onTap: () {
+                    // for localization
+                    final provider =
+                        Provider.of<LocaleProvider>(context, listen: false);
+                    provider.setLocale(Locale('ur'));
+                    // provider.setLocale(Locale('ps'));
                     Navigator.of(context).push(
                         MaterialPageRoute(builder: (ctx) => CovidLgUrdo()));
                   },
@@ -154,6 +168,7 @@ class _ChooseYourLanguageState extends State<ChooseYourLanguage> {
               // ),
               GestureDetector(
                 onTap: () {
+                  provider.setLocale(Locale('ps'));
                   Navigator.of(context).push(
                       MaterialPageRoute(builder: (ctx) => CovidLgPashto()));
                 },
@@ -170,6 +185,9 @@ class _ChooseYourLanguageState extends State<ChooseYourLanguage> {
               color: Colors.white,
               onPressed: () {
                 _scaffoldKey.currentState!.openDrawer();
+                final provider =
+                    Provider.of<LocaleProvider>(context, listen: false);
+                provider.setLocale(Locale('en'));
               },
               icon: Icon(Icons.menu),
             ),

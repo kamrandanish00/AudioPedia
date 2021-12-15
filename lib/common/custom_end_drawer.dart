@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:lgs_audiopedia/screens/english_screens/Dengue_screens/topics_of_dengue_eng.dart';
+import 'package:lgs_audiopedia/screens/english_screens/lg_screens_english/topics_of_lg_eng.dart';
+import 'package:lgs_audiopedia/screens/english_screens/topics.dart';
 
 class CustomEndDrawer extends StatelessWidget {
   const CustomEndDrawer({Key? key}) : super(key: key);
@@ -25,17 +28,38 @@ class CustomEndDrawer extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Image.asset(
-                    'assets/lg.png',
-                    fit: BoxFit.contain,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).pop();
+                      Navigator.of(context).push(
+                          MaterialPageRoute(builder: (ctx) => TopicsOfLGEng()));
+                    },
+                    child: Image.asset(
+                      'assets/lg.png',
+                      fit: BoxFit.contain,
+                    ),
                   ),
-                  Image.asset(
-                    'assets/covid19.png',
-                    fit: BoxFit.contain,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).pop();
+                      Navigator.of(context)
+                          .push(MaterialPageRoute(builder: (ctx) => Topics()));
+                    },
+                    child: Image.asset(
+                      'assets/covid19.png',
+                      fit: BoxFit.contain,
+                    ),
                   ),
-                  Image.asset(
-                    'assets/general.png',
-                    fit: BoxFit.contain,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).pop();
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (ctx) => TopicsOfDengueEng()));
+                    },
+                    child: Image.asset(
+                      'assets/general.png',
+                      fit: BoxFit.contain,
+                    ),
                   ),
                 ],
               ),

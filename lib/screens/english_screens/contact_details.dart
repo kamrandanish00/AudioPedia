@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:lgs_audiopedia/common/header.dart';
 
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 class ContactDetails extends StatelessWidget {
   const ContactDetails({Key? key}) : super(key: key);
 
@@ -26,7 +28,8 @@ class ContactDetails extends StatelessWidget {
               ),
               Spacer(),
               Text(
-                'Feedback Form',
+                // 'Feedback Form',
+                AppLocalizations.of(context)!.feedback_form,
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
@@ -45,7 +48,10 @@ class ContactDetails extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    Text('Contact LG:'),
+                    Text(
+                      // 'Contact LG:',
+                      AppLocalizations.of(context)!.contact_lg,
+                    ),
                     Spacer(),
                     Text('0929847638'),
                   ],
@@ -57,7 +63,10 @@ class ContactDetails extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    Text('Contact NCOC:'),
+                    Text(
+                      // 'Contact NCOC:',
+                      AppLocalizations.of(context)!.contact_ncoc,
+                    ),
                     Spacer(),
                     Text('0929847638'),
                   ],
@@ -68,7 +77,10 @@ class ContactDetails extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    Text('Contact KP Health:'),
+                    Text(
+                      // 'Contact KP Health:',
+                      AppLocalizations.of(context)!.contact_kp_healt,
+                    ),
                     Spacer(),
                     Text('0929847638'),
                   ],
@@ -79,7 +91,10 @@ class ContactDetails extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    Text('Contact Health:'),
+                    Text(
+                      // 'Contact Health:',
+                      AppLocalizations.of(context)!.contact_health,
+                    ),
                     Spacer(),
                     Text('0929847638'),
                   ],

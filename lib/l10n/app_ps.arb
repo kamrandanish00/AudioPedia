@@ -1,6 +1,25 @@
-{
-    "id": "1",
-    "title": "کوویډ ناروغي",
-    "descript": "د کوویډ تفصیل دلته دی."
-
+{   
+    "feedback_form": "رائے فارم",
+    "name": "نوم",
+    "enter_your_name": "خپل نوم ولیکئ",
+    "contact_no": "د اړيکې شمېره",
+    "enter_your_contact_no": "خپل د اړیکو شمیره دننه کړئ",
+    "complaint_department": "د شکایتونو څانګه",
+    "enter_complaint_department": "د شکایت څانګې نوم داخل کړئ",
+    "nature_of_complaint": "د شکایت نوعیت",
+    "enter_complaint_nature": "د شکایت طبیعت داخل کړئ",
+    "complaint_details": "د شکایت جزیات",
+    "provide_complaint_details": "د شکایت توضیحات وړاندې کړئ",
+    "address": "پته",
+    "enter_your_address": "خپل پته دننه کړئ",
+    "province": "صوبہ",
+    "district": "ضلع",
+    "tehsil": "تحصیل",
+    "picture": "انځور",
+    "upload_file": "فایل پورته کړئ",
+    "send": "ولیږي",
+    "contact_lg": "د محلي حکومت سره اړیکه ونیسئ",
+    "contact_ncoc": " این سی او سی سے سره اړیکه ونیسئ",
+    "contact_kp_healt": "د kp روغتیایی څانګې سره اړیکه ونیسئ",
+    "contact_health": "د روغتیا څانګې سره اړیکه ونیسئ"
 }
