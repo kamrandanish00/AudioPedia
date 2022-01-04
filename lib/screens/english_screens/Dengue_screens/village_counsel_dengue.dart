@@ -58,25 +58,29 @@ class VillageCounselDengue extends StatelessWidget {
             ),
             child: Row(
               children: [
-                Expanded(
-                  child: Container(
-                    // height: height / 10,
-                    child: Image.asset(
-                      'assets/germanCooperation.png',
-                    ),
-                  ),
-                ),
-                // SizedBox(
-                //   width: width / 100,
+                // Expanded(
+                //   child: Container(
+                //     // height: height / 10,
+                //     child: Image.asset(
+                //       'assets/germanCooperation.png',
+                //     ),
+                //   ),
                 // ),
+                // // SizedBox(
+                // //   width: width / 100,
+                // // ),
+                // Expanded(
+                //   child: Container(
+                //     // height: height / 10,
+                //     child: Image.asset(
+                //       'assets/kpkgovernment.png',
+                //     ),
+                //   ),
+                // )
+
+                //new logo of giz and lgs
                 Expanded(
-                  child: Container(
-                    // height: height / 10,
-                    child: Image.asset(
-                      'assets/kpkgovernment.png',
-                    ),
-                  ),
-                )
+                    child: Container(child: Image.asset('assets/giz_lg.png')))
               ],
             ),
           ),

@@ -124,7 +124,8 @@ class _TopicsUrdoState extends State<TopicsUrdo> {
                 width: screenWidth * 0.22,
               ),
               Text(
-                topicData[0].title,
+                // topicData[0].title,
+                'کورونا وائرس',
                 style: TextStyle(
                   fontSize: fontSize * 30,
                   fontWeight: FontWeight.bold,
@@ -145,152 +146,163 @@ class _TopicsUrdoState extends State<TopicsUrdo> {
               height: MediaQuery.of(context).size.height * 0.7,
               // margin: const EdgeInsets.fromLTRB(16, 16, 16, 16),
               width: double.infinity,
-              child: ListView.builder(
-                // itemCount: topics!.length,
-                itemCount: topicData.length,
-                itemBuilder: (context, index) {
-                  // final topic = topics![index];
-                  final topic = topicData[index];
+              child: topicData.isNotEmpty
+                  ? ListView.builder(
+                      // itemCount: topics!.length,
+                      itemCount: topicData.length,
+                      itemBuilder: (context, index) {
+                        // final topic = topics![index];
+                        final topic = topicData[index];
 
-                  // return Padding(
-                  //   padding: EdgeInsets.only(bottom: screenHeight * 0.02),
-                  //   child: GestureDetector(
-                  //     onTap: () {
-                  //       Navigator.of(context).push(MaterialPageRoute(
-                  //           builder: (ctx) => IntroductionToLocalGovernment(
-                  //               dataTopics: topicData[index])));
-                  //     },
-                  //     child: Center(
-                  //       child: Stack(
-                  //         // fit: StackFit.passthrough,
-                  //         children: [
-                  //           Positioned(
-                  //             child: DottedBorder(
-                  //               // padding:
-                  //               //     EdgeInsets.only(right: screenHeight * 0.03),
-                  //               customPath: (size) =>
-                  //                   customPathUrdoPshto, // PathBuilder
-                  //               color: Colors.indigo,
+                        // return Padding(
+                        //   padding: EdgeInsets.only(bottom: screenHeight * 0.02),
+                        //   child: GestureDetector(
+                        //     onTap: () {
+                        //       Navigator.of(context).push(MaterialPageRoute(
+                        //           builder: (ctx) => IntroductionToLocalGovernment(
+                        //               dataTopics: topicData[index])));
+                        //     },
+                        //     child: Center(
+                        //       child: Stack(
+                        //         // fit: StackFit.passthrough,
+                        //         children: [
+                        //           Positioned(
+                        //             child: DottedBorder(
+                        //               // padding:
+                        //               //     EdgeInsets.only(right: screenHeight * 0.03),
+                        //               customPath: (size) =>
+                        //                   customPathUrdoPshto, // PathBuilder
+                        //               color: Colors.indigo,
 
-                  //               dashPattern: [30, 0],
-                  //               strokeWidth: 2,
-                  //               child: Container(
-                  //                 margin: EdgeInsets.only(
-                  //                     left: screenWidth * 0.035,
-                  //                     right: screenWidth * 0.2),
-                  //                 alignment: Alignment.centerRight,
-                  //                 // decoration: BoxDecoration(
-                  //                 //   border: Border.all(color: Colors.black),
-                  //                 // ),
-                  //                 // height: 50,
-                  //                 height: screenHeight * 0.122,
+                        //               dashPattern: [30, 0],
+                        //               strokeWidth: 2,
+                        //               child: Container(
+                        //                 margin: EdgeInsets.only(
+                        //                     left: screenWidth * 0.035,
+                        //                     right: screenWidth * 0.2),
+                        //                 alignment: Alignment.centerRight,
+                        //                 // decoration: BoxDecoration(
+                        //                 //   border: Border.all(color: Colors.black),
+                        //                 // ),
+                        //                 // height: 50,
+                        //                 height: screenHeight * 0.122,
 
-                  //                 // width: 260,
-                  //                 width: screenWidth * 0.63,
-                  //                 // color: Colors.green,
-                  //                 child: Text(
-                  //                   topicData[index].title,
-                  //                   style: TextStyle(
-                  //                     fontSize: fontSize * 14,
-                  //                     fontWeight: FontWeight.bold,
-                  //                   ),
-                  //                   textAlign: TextAlign.right,
-                  //                 ),
-                  //               ),
-                  //             ),
-                  //           ),
-                  //           Positioned(
-                  //             child: ClipPath(
-                  //               clipper: CutomClipperforUrdoPashto(),
-                  //               child: Container(
-                  //                 margin: EdgeInsets.only(
-                  //                     right: screenHeight * 0.03),
-                  //                 alignment: Alignment.center,
-                  //                 // height: 52,
-                  //                 height: screenHeight * 0.14,
-                  //                 // width: 52,
-                  //                 width: screenWidth * 0.13,
-                  //                 color: Color(0xff35096D),
-                  //                 child: Text(
-                  //                   topicData[index].id.toString(),
-                  //                   style: TextStyle(
-                  //                     fontSize: fontSize * 15,
-                  //                     fontWeight: FontWeight.bold,
-                  //                     color: Colors.white,
-                  //                   ),
-                  //                 ),
-                  //               ),
-                  //             ),
-                  //           )
-                  //         ],
-                  //       ),
-                  //     ),
-                  //   ),
-                  // );
+                        //                 // width: 260,
+                        //                 width: screenWidth * 0.63,
+                        //                 // color: Colors.green,
+                        //                 child: Text(
+                        //                   topicData[index].title,
+                        //                   style: TextStyle(
+                        //                     fontSize: fontSize * 14,
+                        //                     fontWeight: FontWeight.bold,
+                        //                   ),
+                        //                   textAlign: TextAlign.right,
+                        //                 ),
+                        //               ),
+                        //             ),
+                        //           ),
+                        //           Positioned(
+                        //             child: ClipPath(
+                        //               clipper: CutomClipperforUrdoPashto(),
+                        //               child: Container(
+                        //                 margin: EdgeInsets.only(
+                        //                     right: screenHeight * 0.03),
+                        //                 alignment: Alignment.center,
+                        //                 // height: 52,
+                        //                 height: screenHeight * 0.14,
+                        //                 // width: 52,
+                        //                 width: screenWidth * 0.13,
+                        //                 color: Color(0xff35096D),
+                        //                 child: Text(
+                        //                   topicData[index].id.toString(),
+                        //                   style: TextStyle(
+                        //                     fontSize: fontSize * 15,
+                        //                     fontWeight: FontWeight.bold,
+                        //                     color: Colors.white,
+                        //                   ),
+                        //                 ),
+                        //               ),
+                        //             ),
+                        //           )
+                        //         ],
+                        //       ),
+                        //     ),
+                        //   ),
+                        // );
 
-                  //new design for listview.builder
-                  return Padding(
-                    padding: EdgeInsets.symmetric(
-                        horizontal: screenWidth * 0.05,
-                        vertical: screenHeight * 0.016),
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                            builder: (ctx) => IntroductionToLocalGovernment(
-                                dataTopics: topicData[index])));
+                        //new design for listview.builder
+                        return Padding(
+                          padding: EdgeInsets.symmetric(
+                              horizontal: screenWidth * 0.05,
+                              vertical: screenHeight * 0.016),
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (ctx) =>
+                                      IntroductionToLocalGovernment(
+                                          dataTopics: topicData[index])));
+                            },
+                            child: Row(
+                              children: [
+                                Flexible(
+                                  flex: 1,
+                                  child: Container(
+                                    alignment: Alignment.center,
+                                    // height: screenHeight * 0.0517,
+                                    // width: 40,
+                                    height: screenHeight * 0.14,
+                                    decoration: BoxDecoration(
+                                      color: Color(0xff35096D),
+                                    ),
+                                    child: Text(
+                                      topicData[index].id.toString(),
+                                      style: TextStyle(
+                                        fontSize: fontSize * 20,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Expanded(
+                                  flex: 4,
+                                  child: Container(
+                                    padding: EdgeInsets.symmetric(
+                                        horizontal: screenWidth * 0.02),
+                                    alignment: Alignment.centerRight,
+                                    // height: 40,
+                                    height: screenHeight * 0.14,
+                                    // width: 200,
+                                    decoration: BoxDecoration(
+                                      // color: Colors.purple,
+                                      border: Border.all(
+                                          color: Colors.black, width: 2),
+                                    ),
+                                    child: Text(
+                                      topicData[index].title,
+                                      style: TextStyle(
+                                        fontSize: fontSize * 14,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                      textAlign: TextAlign.right,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        );
                       },
-                      child: Row(
-                        children: [
-                          Flexible(
-                            flex: 1,
-                            child: Container(
-                              alignment: Alignment.center,
-                              // height: screenHeight * 0.0517,
-                              // width: 40,
-                              height: screenHeight * 0.14,
-                              decoration: BoxDecoration(
-                                color: Color(0xff35096D),
-                              ),
-                              child: Text(
-                                topicData[index].id.toString(),
-                                style: TextStyle(
-                                  fontSize: fontSize * 20,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white,
-                                ),
-                              ),
-                            ),
-                          ),
-                          Expanded(
-                            flex: 4,
-                            child: Container(
-                              padding: EdgeInsets.symmetric(
-                                  horizontal: screenWidth * 0.02),
-                              alignment: Alignment.centerRight,
-                              // height: 40,
-                              height: screenHeight * 0.14,
-                              // width: 200,
-                              decoration: BoxDecoration(
-                                // color: Colors.purple,
-                                border:
-                                    Border.all(color: Colors.black, width: 2),
-                              ),
-                              child: Text(
-                                topicData[index].title,
-                                style: TextStyle(
-                                  fontSize: fontSize * 14,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                                textAlign: TextAlign.right,
-                              ),
-                            ),
-                          ),
-                        ],
+                    )
+                  : Container(
+                      alignment: Alignment.center,
+                      child: Text(
+                        'No results found',
+                        style: TextStyle(
+                          fontSize: 20,
+                        ),
                       ),
                     ),
-                  );
-                },
-              ),
             ),
           ),
 

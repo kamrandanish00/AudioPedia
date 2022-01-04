@@ -21,6 +21,12 @@
     "contact_lg": "Contact Locale Government",
     "contact_ncoc": "Contact NCOC",
     "contact_kp_healt": "Contact KP Health",
-    "contact_health": "Contact Health"
+    "contact_health": "Contact Health",
+    "please_enter_your_name": "Please enter your name",
+    "please_enter_your_contact_no": "Please enter your contact no",
+    "this_field_is_mandatory": "This field is mandatory",
+    "kindly_provide_some_details_about_complaint": "Kindly provide some details about your complaint.",
+    "perimission_denied": "Permission denied!",
+    "search_topics": "Search Topics"
     
 }

@@ -4,6 +4,7 @@ import 'package:lgs_audiopedia/model/topic.dart';
 import 'package:lgs_audiopedia/screens/english_screens/introduction_local_government.dart';
 import 'package:lgs_audiopedia/screens/english_screens/search_widget.dart';
 import 'package:lgs_audiopedia/screens/topics_data.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Topics extends StatefulWidget {
   const Topics({Key? key}) : super(key: key);
@@ -35,8 +36,13 @@ class _TopicsState extends State<Topics> {
       final titleLower = book.title.toLowerCase();
       // final authorLower = book.author.toLowerCase();
       final searchLower = query.toLowerCase();
-
-      return titleLower.contains(searchLower);
+      if (titleLower.contains(searchLower)) {
+        return titleLower.contains(searchLower);
+      } else {
+        return false;
+      }
+      //old code
+      // return titleLower.contains(searchLower);
       //  ||
       //     authorLower.contains(searchLower);
     }).toList();
@@ -56,7 +62,8 @@ class _TopicsState extends State<Topics> {
   Widget build(BuildContext context) {
     Widget buildSearch() => SearchWidget(
           text: query,
-          hintText: 'Search Topic',
+          // hintText: 'Search Topic',
+          hintText: AppLocalizations.of(context)!.search_topics,
           onChanged: searchBook,
         );
 
@@ -110,7 +117,8 @@ class _TopicsState extends State<Topics> {
               Expanded(
                 // fit: BoxFit.contain,
                 child: Text(
-                  topicData[0].title,
+                  // topicData[0].title,
+                  'Covid-19',
                   style: TextStyle(
                     fontSize: MediaQuery.of(context).textScaleFactor * 30,
                     fontWeight: FontWeight.bold,
@@ -133,133 +141,144 @@ class _TopicsState extends State<Topics> {
             child: Container(
               height: MediaQuery.of(context).size.height * 0.7,
               width: double.infinity,
-              child: ListView.builder(
-                // itemCount: topics!.length,
-                itemCount: topicData.length,
-                itemBuilder: (context, index) {
-                  // final topic = topics![index];
-                  final topic = topicData[index];
-
-                  // return Padding(
-                  //   padding: const EdgeInsets.fromLTRB(0, 0, 0, 10),
-                  //   child: GestureDetector(
-                  //     onTap: () {
-                  //       Navigator.of(context).push(MaterialPageRoute(
-                  //           builder: (ctx) => IntroductionToLocalGovernment(
-                  //               dataTopics: topicData[index])));
-                  //     },
-                  //     child: Center(
-                  //       child: Stack(
-                  //         children: [
-                  //           Positioned(
-                  //             child: DottedBorder(
-                  //               // padding: EdgeInsets.symmetric(horizontal: 20),
-                  //               customPath: (size) => customPath, // PathBuilder
-                  //               color: Colors.indigo,
-                  //               dashPattern: [8, 4],
-                  //               strokeWidth: 2,
-                  //               child: Container(
-                  //                 margin: EdgeInsets.only(left: 60, right: 40),
-                  //                 alignment: Alignment.centerLeft,
-                  //                 height: 50,
-                  //                 width: 260,
-                  //                 // color: Colors.green,
-                  //                 child: Text(
-                  //                   topicData[index].title,
-                  //                   style: TextStyle(
-                  //                     fontSize: 15,
-                  //                     fontWeight: FontWeight.bold,
-                  //                   ),
-                  //                 ),
-                  //               ),
-                  //             ),
-                  //           ),
-                  //           Positioned(
-                  //             child: ClipPath(
-                  //               clipper: MyCustomClipper(),
-                  //               child: Container(
-                  //                   alignment: Alignment.center,
-                  //                   height: 52,
-                  //                   width: 50,
-                  //                   color: Color(0xff35096D),
-                  //                   child: Text(
-                  //                     topicData[index].id.toString(),
-                  //                     style: TextStyle(
-                  //                       fontSize: 24,
-                  //                       fontWeight: FontWeight.bold,
-                  //                       color: Colors.white,
-                  //                     ),
-                  //                   )),
-                  //             ),
-                  //           )
-                  //         ],
-                  //       ),
-                  //     ),
-                  //   ),
-                  // );
-                  //new design for listview.builder
-                  return Padding(
-                    padding: EdgeInsets.symmetric(
-                        horizontal: screenWidth * 0.05,
-                        vertical: screenHeight * 0.016),
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                            builder: (ctx) => IntroductionToLocalGovernment(
-                                dataTopics: topicData[index])));
-                      },
-                      child: Row(
-                        children: [
-                          Flexible(
-                            flex: 1,
-                            child: Container(
-                              alignment: Alignment.center,
-                              // height: screenHeight * 0.0517,
-                              // width: 40,
-                              height: screenHeight * 0.14,
-                              decoration: BoxDecoration(
-                                color: Color(0xff35096D),
-                              ),
-                              child: Text(
-                                topicData[index].id.toString(),
-                                style: TextStyle(
-                                  fontSize: fontSize * 20,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white,
-                                ),
-                              ),
-                            ),
-                          ),
-                          Expanded(
-                            flex: 4,
-                            child: Container(
-                              padding: EdgeInsets.symmetric(
-                                  horizontal: screenWidth * 0.02),
-                              alignment: Alignment.centerLeft,
-                              // height: 40,
-                              height: screenHeight * 0.14,
-                              // width: 200,
-                              decoration: BoxDecoration(
-                                // color: Colors.purple,
-                                border:
-                                    Border.all(color: Colors.black, width: 2),
-                              ),
-                              child: Text(
-                                topicData[index].title,
-                                style: TextStyle(
-                                  fontSize: fontSize * 14,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                                // textAlign: TextAlign.right,
-                              ),
-                            ),
-                          ),
-                        ],
+              child: topicData.isEmpty
+                  ? Container(
+                      alignment: Alignment.center,
+                      child: Text(
+                        'No results found',
+                        style: TextStyle(
+                          fontSize: 20,
+                        ),
                       ),
+                    )
+                  : ListView.builder(
+                      // itemCount: topics!.length,
+                      itemCount: topicData.length,
+                      itemBuilder: (context, index) {
+                        // final topic = topics![index];
+                        final topic = topicData[index];
+
+                        // return Padding(
+                        //   padding: const EdgeInsets.fromLTRB(0, 0, 0, 10),
+                        //   child: GestureDetector(
+                        //     onTap: () {
+                        //       Navigator.of(context).push(MaterialPageRoute(
+                        //           builder: (ctx) => IntroductionToLocalGovernment(
+                        //               dataTopics: topicData[index])));
+                        //     },
+                        //     child: Center(
+                        //       child: Stack(
+                        //         children: [
+                        //           Positioned(
+                        //             child: DottedBorder(
+                        //               // padding: EdgeInsets.symmetric(horizontal: 20),
+                        //               customPath: (size) => customPath, // PathBuilder
+                        //               color: Colors.indigo,
+                        //               dashPattern: [8, 4],
+                        //               strokeWidth: 2,
+                        //               child: Container(
+                        //                 margin: EdgeInsets.only(left: 60, right: 40),
+                        //                 alignment: Alignment.centerLeft,
+                        //                 height: 50,
+                        //                 width: 260,
+                        //                 // color: Colors.green,
+                        //                 child: Text(
+                        //                   topicData[index].title,
+                        //                   style: TextStyle(
+                        //                     fontSize: 15,
+                        //                     fontWeight: FontWeight.bold,
+                        //                   ),
+                        //                 ),
+                        //               ),
+                        //             ),
+                        //           ),
+                        //           Positioned(
+                        //             child: ClipPath(
+                        //               clipper: MyCustomClipper(),
+                        //               child: Container(
+                        //                   alignment: Alignment.center,
+                        //                   height: 52,
+                        //                   width: 50,
+                        //                   color: Color(0xff35096D),
+                        //                   child: Text(
+                        //                     topicData[index].id.toString(),
+                        //                     style: TextStyle(
+                        //                       fontSize: 24,
+                        //                       fontWeight: FontWeight.bold,
+                        //                       color: Colors.white,
+                        //                     ),
+                        //                   )),
+                        //             ),
+                        //           )
+                        //         ],
+                        //       ),
+                        //     ),
+                        //   ),
+                        // );
+                        //new design for listview.builder
+                        return Padding(
+                          padding: EdgeInsets.symmetric(
+                              horizontal: screenWidth * 0.05,
+                              vertical: screenHeight * 0.016),
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (ctx) =>
+                                      IntroductionToLocalGovernment(
+                                          dataTopics: topicData[index])));
+                            },
+                            child: Row(
+                              children: [
+                                Flexible(
+                                  flex: 1,
+                                  child: Container(
+                                    alignment: Alignment.center,
+                                    // height: screenHeight * 0.0517,
+                                    // width: 40,
+                                    height: screenHeight * 0.14,
+                                    decoration: BoxDecoration(
+                                      color: Color(0xff35096D),
+                                    ),
+                                    child: Text(
+                                      topicData[index].id.toString(),
+                                      style: TextStyle(
+                                        fontSize: fontSize * 20,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Expanded(
+                                  flex: 4,
+                                  child: Container(
+                                    padding: EdgeInsets.symmetric(
+                                        horizontal: screenWidth * 0.02),
+                                    alignment: Alignment.centerLeft,
+                                    // height: 40,
+                                    height: screenHeight * 0.14,
+                                    // width: 200,
+                                    decoration: BoxDecoration(
+                                      // color: Colors.purple,
+                                      border: Border.all(
+                                          color: Colors.black, width: 2),
+                                    ),
+                                    child: Text(
+                                      topicData[index].title,
+                                      style: TextStyle(
+                                        fontSize: fontSize * 14,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                      // textAlign: TextAlign.right,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        );
+                      },
                     ),
-                  );
-                },
-              ),
             ),
           ),
 

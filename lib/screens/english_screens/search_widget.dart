@@ -48,6 +48,8 @@ class _SearchWidgetState extends State<SearchWidget> {
                   },
                 )
               : null,
+          //new code
+          // : Container(child: Text('No results found!')),
           hintText: widget.hintText,
           hintStyle: style,
           border: InputBorder.none,

@@ -21,5 +21,12 @@
     "contact_lg": "د محلي حکومت سره اړیکه ونیسئ",
     "contact_ncoc": " این سی او سی سے سره اړیکه ونیسئ",
     "contact_kp_healt": "د kp روغتیایی څانګې سره اړیکه ونیسئ",
-    "contact_health": "د روغتیا څانګې سره اړیکه ونیسئ"
+    "contact_health": "د روغتیا څانګې سره اړیکه ونیسئ",
+
+    "please_enter_your_name": "مهرباني وکړئ خپل نوم ولیکئ.",
+    "please_enter_your_contact_no": "مهرباني وکړئ خپل د تماس شمیره دننه کړئ.",
+    "this_field_is_mandatory": "دا ساحه لازمي ده.",
+    "kindly_provide_some_details_about_complaint": "مهرباني وکړئ د خپل شکایت په اړه ځینې توضیحات ورکړئ.",
+    "perimission_denied": "اجازه ورنکړل شوه!",
+    "search_topics": "موضوع وپلټئ"
 }

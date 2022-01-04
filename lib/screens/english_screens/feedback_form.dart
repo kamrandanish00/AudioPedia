@@ -210,7 +210,9 @@ class _FeedbackFormState extends State<FeedbackForm> {
                                               validator: (value) {
                                                 if (value == null ||
                                                     value.isEmpty) {
-                                                  return 'Please enter your name';
+                                                  return AppLocalizations.of(
+                                                          context)!
+                                                      .please_enter_your_name;
                                                 }
                                                 return null;
                                               },
@@ -265,7 +267,10 @@ class _FeedbackFormState extends State<FeedbackForm> {
                                               validator: (value) {
                                                 if (value == null ||
                                                     value.isEmpty) {
-                                                  return 'Please enter your contact no';
+                                                  // return 'Please enter your contact no';
+                                                  return AppLocalizations.of(
+                                                          context)!
+                                                      .please_enter_your_contact_no;
                                                 }
                                                 return null;
                                               },
@@ -326,7 +331,10 @@ class _FeedbackFormState extends State<FeedbackForm> {
                                               validator: (value) {
                                                 if (value == null ||
                                                     value.isEmpty) {
-                                                  return 'This field is required';
+                                                  // return 'This field is required';
+                                                  return AppLocalizations.of(
+                                                          context)!
+                                                      .this_field_is_mandatory;
                                                 }
                                                 return null;
                                               },
@@ -430,7 +438,10 @@ class _FeedbackFormState extends State<FeedbackForm> {
                                             validator: (value) {
                                               if (value == null ||
                                                   value.isEmpty) {
-                                                return 'Kindly provide some details about your complaint.';
+                                                // return 'Kindly provide some details about your complaint.';
+                                                return AppLocalizations.of(
+                                                        context)!
+                                                    .kindly_provide_some_details_about_complaint;
                                               }
                                               return null;
                                             },

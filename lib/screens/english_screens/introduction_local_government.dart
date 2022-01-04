@@ -818,6 +818,7 @@ class _IntroductionToLocalGovernmentState
                                 TextAudioPlayer(
                                   audioPath: widget.dataTopics.audioUrl,
                                   txtContents: widget.dataTopics.description,
+                                  title: widget.dataTopics.title,
                                 ),
                               ],
                             )

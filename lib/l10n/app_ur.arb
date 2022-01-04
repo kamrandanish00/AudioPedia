@@ -21,5 +21,12 @@
     "contact_lg": "مقامی حکومت سے رابطہ کریں۔",
     "contact_ncoc": "این سی او سی سے رابطہ کریں۔",
     "contact_kp_healt": "کے پی ہیلتھ سے رابطہ کریں۔",
-    "contact_health": "محکمہ صحت سے رابطہ کریں۔"
+    "contact_health": "محکمہ صحت سے رابطہ کریں۔",
+
+    "please_enter_your_name": "براہ مہربانی اپنا نام درج کریں",
+    "please_enter_your_contact_no": "براہ کرم اپنا رابطہ نمبر درج کریں۔",
+    "this_field_is_mandatory": "یہ فیلڈ لازمی ہے۔",
+    "kindly_provide_some_details_about_complaint": "براہ کرم اپنی شکایت کے بارے میں کچھ تفصیلات فراہم کریں۔",
+    "perimission_denied": "اجازت نہیں دی گئی!",
+    "search_topics": "موضوع تلاش کریں۔"
 }
