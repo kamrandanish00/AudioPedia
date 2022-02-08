@@ -1,5 +1,6 @@
 {   
-    "feedback_form": "رائے فارم",
+    "feedback_form": "رائے ",
+    "contact_details": "رابطہ کی تفصیلات",
     "name": "نام",
     "enter_your_name": "اپنا نام درج کریں",
     "contact_no": "رابطے کا نمبر",
@@ -28,5 +29,10 @@
     "this_field_is_mandatory": "یہ فیلڈ لازمی ہے۔",
     "kindly_provide_some_details_about_complaint": "براہ کرم اپنی شکایت کے بارے میں کچھ تفصیلات فراہم کریں۔",
     "perimission_denied": "اجازت نہیں دی گئی!",
-    "search_topics": "موضوع تلاش کریں۔"
+    "search_topics": "موضوع تلاش کریں۔",
+    "are_you_sure": "کیا تمہیں یقین ہے؟",
+    "do_you_want_to_exit": "کیا آپ باہر نکلنا چاہتے ہیں؟",
+    "yes": "جی ہاں",
+    "no": "نہیں",
+    "contact_us": "ہم سے رابطہ کریں"
 }

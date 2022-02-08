@@ -33,6 +33,43 @@
           ]
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:655857028006:android:ac4c30b0f9342bdd45dd67",
+        "android_client_info": {
+          "package_name": "com.kamran.lgs_audiopedia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "655857028006-hge7he6sl52iop0av6kelhh17fqntjpe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kamran.lgs_audiopedia",
+            "certificate_hash": "2a6a332ff4a45ca13e6fc435d7b69af305a9d244"
+          }
+        },
+        {
+          "client_id": "655857028006-ullb10dbn1slm6d8p13mv34j0if3if3b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-afHSTrXlmj_v0bgkkWbdb-N9EUUm_EA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "655857028006-ullb10dbn1slm6d8p13mv34j0if3if3b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
     }
   ],
   "configuration_version": "1"

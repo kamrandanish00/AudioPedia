@@ -23,7 +23,7 @@ final allTopics = <Topic>[
   ),
   Topic(
     id: 3,
-    title: 'Symptoms:',
+    title: 'Symptoms',
     description:
         'Covid 19 affects different people in different ways ranging from mild to moderate and severe illness. Majority of people experience a mild or asymptomatic coronavirus infection, some people will have far more serious and even life-threatening symptoms and complications.\n'
         'Mild symptoms:\n'
@@ -58,7 +58,7 @@ final allTopics = <Topic>[
   ),
   Topic(
     id: 5,
-    title: 'People most at risk for getting Covid -19',
+    title: 'People most at risk for getting Covid-19',
     description:
         'The virus can infect anyone but people who are most at risk are:\n'
         '•	People with less immunity \n'
@@ -100,7 +100,7 @@ final allTopics = <Topic>[
   ),
   Topic(
     id: 9,
-    title: 'Steps if You Have COVID-19',
+    title: 'Steps to Take if You Have COVID-19',
     description:
         '•	Stay at home from a week to 15 days and get complete rest.\n'
         '•	Avoid crowded place and people until you feel better.\n'
@@ -110,7 +110,7 @@ final allTopics = <Topic>[
   ),
   Topic(
     id: 10,
-    title: 'audio',
+    title: 'Get Help if you are Very Sick',
     description:
         '•	Monitor your health and keep your family members informed how you feel to avoid deteriorating situation.\n'
         '•	Call your doctor if you are worried about how you feel.\n'
@@ -220,7 +220,7 @@ final allTopics = <Topic>[
   ),
   Topic(
     id: 17,
-    title: 'When to get vaccination:',
+    title: 'When to get vaccination',
     description:
         'Government of Pakistan has made vaccine available for all age brackets free of cost hence the early the better it would be to get vaccinated. Immediately send a message on 1166 with your NIC no and get a date for vaccination at designated places. In addition to this government has established walk in facilities for vaccination for the convenience of people at large.\n'
         'Myths about vaccination:\n'

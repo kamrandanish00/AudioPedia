@@ -1,5 +1,6 @@
 {   
-    "feedback_form": "رائے فارم",
+    "feedback_form": "رائے ",
+    "contact_details": "د اړیکو نیولو معلومات",
     "name": "نوم",
     "enter_your_name": "خپل نوم ولیکئ",
     "contact_no": "د اړيکې شمېره",
@@ -28,5 +29,10 @@
     "this_field_is_mandatory": "دا ساحه لازمي ده.",
     "kindly_provide_some_details_about_complaint": "مهرباني وکړئ د خپل شکایت په اړه ځینې توضیحات ورکړئ.",
     "perimission_denied": "اجازه ورنکړل شوه!",
-    "search_topics": "موضوع وپلټئ"
+    "search_topics": "موضوع وپلټئ",
+    "are_you_sure": "کیا تمہیں یقین ہے؟",
+    "do_you_want_to_exit": "کیا آپ باہر نکلنا چاہتے ہیں؟",
+    "yes": "جی ہاں",
+    "no": "نہیں",
+    "contact_us": "موږ سره اړیکه ونیسئ"
 }

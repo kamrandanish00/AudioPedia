@@ -22,30 +22,15 @@ class _SplashScreenState extends State<SplashScreen>
     super.initState();
 
     _animationController = AnimationController(
-      duration: Duration(milliseconds: 400),
+      duration: Duration(milliseconds: 300),
       vsync: this,
     )..repeat(reverse: true);
 
-    curveAnimation = CurvedAnimation(
-        parent: _animationController!, curve: Curves.bounceInOut);
+    curveAnimation =
+        CurvedAnimation(parent: _animationController!, curve: Curves.linear);
 
-    // _animationController!.forward().then((value) {
-    //   if (_animationController!.isCompleted) {
-    //     _animationController!.reverse();
-    //   } else if (_animationController!.isDismissed) {
-    //     _animationController!.forward();
-    //   } else {
-    //     _animationController!.reverse();
-    //   }
-    // });
-
-    // if (_animationController!.isCompleted) {
-    //   _animationController!.reverse();
-    // } else {
-    //   _animationController!.reverse();
-    // }
-    Timer(Duration(milliseconds: 4000), () {
-      Navigator.pushReplacement(
+    Timer(Duration(milliseconds: 3000), () {
+      Navigator.push(
           context, MaterialPageRoute(builder: (ctx) => ChooseYourLanguage()));
     });
   }
@@ -64,72 +49,81 @@ class _SplashScreenState extends State<SplashScreen>
     print('this is the height: $screenHeight');
     print('this is the height: $screenWidth');
     return Scaffold(
-        backgroundColor: Color(0xff35016D),
-        body: Stack(
-          children: [
-            PositionedTransition(
-              rect: RelativeRectTween(
-                begin: RelativeRect.fromLTRB(50, 100, 50, 150),
-                end: RelativeRect.fromLTRB(50, 0, 50, 100),
-              ).animate(curveAnimation!),
-              child: Container(
-                // width: 120,
-                // height: 120,
-                child: Image(
-                  image: AssetImage('assets/logo.png'),
-                ),
+      backgroundColor: Color(0xff35016D),
+      // body: Stack(
+      //   children: [
+      //     PositionedTransition(
+      //       rect: RelativeRectTween(
+      //         begin: RelativeRect.fromLTRB(50, 100, 50, 150),
+      //         end: RelativeRect.fromLTRB(50, 0, 50, 100),
+      //       ).animate(curveAnimation!),
+      //       child: Container(
+      //         // width: 120,
+      //         // height: 120,
+      //         child: Image(
+      //           image: AssetImage('assets/logo.png'),
+      //         ),
+      //       ),
+      //     ),
+      //     Positioned(
+      //       // top: screenHeight * 0.9,
+      //       bottom: 0,
+      //       left: 0,
+      //       right: 0,
+      //       height: screenHeight * 0.1,
+      //       child: Container(
+      //         // height: screenHeight / 8,
+
+      //         // width: double.infinity,
+      //         // width: screenWidth,
+      //         decoration: BoxDecoration(
+      //           color: Colors.white,
+      //         ),
+      //         child: Row(
+      //           children: [
+      //             //new logo of giz and lgs
+      //             Expanded(
+      //                 child: Container(child: Image.asset('assets/giz_lg.png')))
+      //           ],
+      //         ),
+      //       ),
+      //     ),
+      //   ],
+      // ),
+
+      //
+      body: Stack(
+        children: [
+          Center(
+            child: Container(
+              margin: EdgeInsets.symmetric(horizontal: screenWidth * 0.1),
+              // width: 120,
+              // height: 120,
+              child: Image(
+                image: AssetImage('assets/logo.png'),
               ),
             ),
-            Positioned(
-              // top: screenHeight * 0.9,
-              bottom: 0,
-              left: 0,
-              right: 0,
-              height: screenHeight * 0.1,
-              child: Container(
-                // height: screenHeight / 8,
-
-                // width: double.infinity,
-                // width: screenWidth,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  // borderRadius: BorderRadius.only(
-                  //   topLeft: Radius.circular(20),
-                  //   topRight: Radius.circular(20),
-                  // ),
-                ),
-                child: Row(
-                  children: [
-                    // Expanded(
-                    //   child: Container(
-                    //     // height: height / 10,
-                    //     child: Image.asset(
-                    //       'assets/germanCooperation.png',
-                    //     ),
-                    //   ),
-                    // ),
-                    // // SizedBox(
-                    // //   width: screenWidth / 100,
-                    // // ),
-                    // Expanded(
-                    //   child: Container(
-                    //     // height: height / 10,
-                    //     child: Image.asset(
-                    //       'assets/kpkgovernment.png',
-                    //     ),
-                    //   ),
-                    // )
-
-                    //new logo of giz and lgs
-                    Expanded(
-                        child:
-                            Container(child: Image.asset('assets/giz_lg.png')))
-                  ],
-                ),
+          ),
+          //
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.white,
+              ),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  //new logo of giz and lgs
+                  Expanded(
+                      child: Container(child: Image.asset('assets/giz_lg.png')))
+                ],
               ),
             ),
-          ],
-        ));
+          ),
+        ],
+      ),
+    );
   }
 }
 

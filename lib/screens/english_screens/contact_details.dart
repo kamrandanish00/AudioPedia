@@ -29,7 +29,7 @@ class ContactDetails extends StatelessWidget {
               Spacer(),
               Text(
                 // 'Feedback Form',
-                AppLocalizations.of(context)!.feedback_form,
+                AppLocalizations.of(context)!.contact_us,
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
@@ -53,7 +53,7 @@ class ContactDetails extends StatelessWidget {
                       AppLocalizations.of(context)!.contact_lg,
                     ),
                     Spacer(),
-                    Text('0929847638'),
+                    Text('(091) 9219015'),
                   ],
                 ),
                 Divider(
@@ -68,7 +68,7 @@ class ContactDetails extends StatelessWidget {
                       AppLocalizations.of(context)!.contact_ncoc,
                     ),
                     Spacer(),
-                    Text('0929847638'),
+                    Text('(091) 9211451'),
                   ],
                 ),
                 Divider(
@@ -82,7 +82,7 @@ class ContactDetails extends StatelessWidget {
                       AppLocalizations.of(context)!.contact_kp_healt,
                     ),
                     Spacer(),
-                    Text('0929847638'),
+                    Text('(091) 9210523'),
                   ],
                 ),
                 Divider(
@@ -96,7 +96,7 @@ class ContactDetails extends StatelessWidget {
                       AppLocalizations.of(context)!.contact_health,
                     ),
                     Spacer(),
-                    Text('0929847638'),
+                    Text('(091) 9212051'),
                   ],
                 ),
                 // Divider(

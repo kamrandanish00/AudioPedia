@@ -103,8 +103,6 @@ class _TopicsOfLGEngState extends State<TopicsOfLGEng> {
               IconButton(
                 onPressed: () {
                   Navigator.of(context).pop();
-                  // Navigator.of(context).pushReplacement(
-                  //     MaterialPageRoute(builder: (ctx) => CovidLgs()));
                 },
                 icon: Icon(Icons.arrow_back),
                 color: Color(0xff35016D),
@@ -116,16 +114,21 @@ class _TopicsOfLGEngState extends State<TopicsOfLGEng> {
               // Spacer(),
               Expanded(
                 // fit: BoxFit.contain,
-                child: Text(
-                  // topicData[0].title,
-                  'FATA DEVELOPMENT PROGRAMME \nGIZ',
-                  style: TextStyle(
-                    fontSize: MediaQuery.of(context).textScaleFactor * 17,
-                    fontWeight: FontWeight.bold,
-                    color: Color(0xff35016D),
-                    // overflow: TextOverflow.clip,
+                child: FittedBox(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    child: Text(
+                      // topicData[0].title,
+                      'Local Government Khyber Pakhtunkhwa',
+                      style: TextStyle(
+                        fontSize: MediaQuery.of(context).textScaleFactor * 17,
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xff35016D),
+                        // overflow: TextOverflow.clip,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
                   ),
-                  textAlign: TextAlign.center,
                 ),
               ),
               // Spacer(),

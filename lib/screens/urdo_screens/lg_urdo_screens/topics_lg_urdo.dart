@@ -6,6 +6,7 @@ import 'package:lgs_audiopedia/screens/english_screens/search_widget.dart';
 import 'package:lgs_audiopedia/screens/english_screens/topics.dart';
 import 'package:lgs_audiopedia/screens/urdo_screens/model/lg_data_urdo.dart';
 import 'package:lgs_audiopedia/screens/urdo_screens/urdo_common/customClipperForUrdoPashto.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class TopicsLGUrdo extends StatefulWidget {
   const TopicsLGUrdo({Key? key}) : super(key: key);
@@ -58,7 +59,7 @@ class _TopicsLGUrdoState extends State<TopicsLGUrdo> {
   Widget build(BuildContext context) {
     Widget buildSearch() => SearchWidget(
           text: query,
-          hintText: 'Search Topic',
+          hintText: AppLocalizations.of(context)!.search_topics,
           onChanged: searchBook,
         );
 
@@ -113,32 +114,20 @@ class _TopicsLGUrdoState extends State<TopicsLGUrdo> {
                 color: Color(0xff35016D),
                 iconSize: screenHeight * 0.08,
               ),
-              SizedBox(
-                width: screenWidth * 0.2,
-              ),
-              Column(
-                children: [
-                  Text(
-                    // topicData[0].title,
-                    'فاٹا ڈویلپمنٹ پروگرام',
-                    style: TextStyle(
-                      fontSize: txtFont * 16,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xff35016D),
-                    ),
-                    textAlign: TextAlign.right,
+              // SizedBox(
+              //   width: screenWidth * 0.2,
+              // ),
+              Expanded(
+                child: Text(
+                  // topicData[0].title,
+                  'مقامی حکومت کے پی',
+                  style: TextStyle(
+                    fontSize: txtFont * 25,
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xff35016D),
                   ),
-                  Text(
-                    // topicData[0].title,
-                    'جی آئی زیڈ',
-                    style: TextStyle(
-                      fontSize: txtFont * 16,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xff35016D),
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                ],
+                  textAlign: TextAlign.center,
+                ),
               ),
             ],
           ),

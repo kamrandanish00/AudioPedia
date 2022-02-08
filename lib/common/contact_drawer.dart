@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lgs_audiopedia/screens/english_screens/contact_details.dart';
 import 'package:lgs_audiopedia/screens/english_screens/feedback_form.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class ContactDrawer extends StatelessWidget {
   const ContactDrawer({Key? key}) : super(key: key);
@@ -42,7 +43,8 @@ class ContactDrawer extends StatelessWidget {
                   color: Colors.white,
                 ),
                 title: Text(
-                  'Feedback Form',
+                  // 'Feedback/رائے',
+                  AppLocalizations.of(context)!.feedback_form,
                   style: TextStyle(
                     color: Colors.white,
                   ),
@@ -60,7 +62,8 @@ class ContactDrawer extends StatelessWidget {
                 color: Colors.white,
               ),
               title: Text(
-                'Contact Details',
+                // 'Contact Details',
+                AppLocalizations.of(context)!.contact_details,
                 style: TextStyle(
                   color: Colors.white,
                 ),

@@ -22,7 +22,7 @@ final lgDataEnglish = <Topic>[
       audioUrl: 'audioUrl'),
   Topic(
       id: 4,
-      title: 'Need for abolition of FCR? ',
+      title: 'Need for abolition of FCR?',
       description:
           'The FCR was enacted to suppress the tribal people and to ensure their safe passage to Afghanistan border for containing Russian imperial design in the 19th century.  The basic purpose of the FCR was to indirectly administer this region in the interest of the colonial power. Unfortunately, more than half a century after independence of Pakistan, FATA was still ruled through an outdated administrative and legal system till 2018. Denials of basic human, judicial and legal rights coupled with economic deprivation were the main reasons to abolish FCR as per the desire of the residents.',
       audioUrl: 'audioUrl'),
@@ -90,14 +90,14 @@ final lgDataEnglish = <Topic>[
       audioUrl: 'audio'),
   Topic(
       id: 10,
-      title: '10.	What is Local Government ',
+      title: 'What is Local Government',
       description:
           'Pakistan is a federal republic with three tiers of government: national, provincial, and local. Local government is protected by the 1973 constitution of Pakistan and each province has its own local-government-system from time to time and implementation framework.\n'
           'Local government is the third tier of a government created in line with constitutional provision of a country and gives the population at a grass-root level a sense of involvement and ownership in the political processes that control their   daily lives.',
       audioUrl: 'audio'),
   Topic(
       id: 11,
-      title: 'History of Local Government ',
+      title: 'History of Local Government',
       description:
           'Local government was in place before partition in the sub-continent under British rule but was mostly restricted to urban areas for the provision of municipal services. First Municipality was established in 1668 by East India Company in Madrassa followed by Conservancy Act 1842 paving was for the formation of Sanitary Committee for garbage disposal. Which was the formal beginning of local government system in the subcontinent. Ever since Pakistan has come into being in 1947, the local government system has kept evolving for better results at grassroot level.  For the initial 10 years after 1947, there was no existence of local government system in the country.\n'
           'The active history of local government in Pakistan started with introduction of Basic Democracy System in 1959 by General Ayub Khan. A word about each era is given below: \n',
@@ -110,7 +110,7 @@ final lgDataEnglish = <Topic>[
       audioUrl: 'audio'),
   Topic(
       id: 13,
-      title: 'Local Government System1979-88:',
+      title: 'Local Government System1979-88',
       description:
           'General Zia Ul Haq in 1977 again revived the local government system through Local Government Ordinance. Elections were held for the establishment of local governments in all the four provinces in 1979.This system comprises of two tiers system of local government i.e. \n'
           '•	Urban: consisting of municipal corporation, municipal committees, and town committees\n'
@@ -119,13 +119,13 @@ final lgDataEnglish = <Topic>[
       audioUrl: 'audio'),
   Topic(
       id: 14,
-      title: 'Local Government System 2001-2009: ',
+      title: 'Local Government System 2001-2009',
       description:
           'In 2001, as a part of devolution plan, provincial governments promulgated their respective Local Government Ordinances 2001 to operationalize the devolution plan, providing a legal and constitutional backing to the new local government system which was altogether different both in tone and tenor from the previous Local governments introduced from time to time. The main difference in LGO 2001 and other system was that it introduced three tiers of LG i.e., district, tehsil, and union administration. Urban and Rural divide was abolished under LGO, 2001.',
       audioUrl: 'audio'),
   Topic(
       id: 15,
-      title: 'Local Government Act 2012:',
+      title: 'Local Government Act 2012',
       description:
           'As a result of 18th constitutional amendment in 2010, the political government in the province of Khyber Pakhtunkhwa enacted Local Government Act 2012 which comprised of Urban Division and Rural Division\n'
           '•	Urban Division: consisting of municipal corporation, municipal committees, and town committees. In the Municipal corporation Peshawar, there were urban union councils\n'
@@ -133,7 +133,7 @@ final lgDataEnglish = <Topic>[
       audioUrl: 'audio'),
   Topic(
       id: 16,
-      title: 'Local Government Directorate in the Merged Areas:',
+      title: 'Local Government Directorate in the Merged Areas',
       description:
           'Directorate of Local Government Elections and Rural Development Department had a nominal presence of 7 Assistant Director offices (ADs) in the district and three town committees in Parachinar, Sadda in Kurram and Miranshah in North Waziristan. The Assistant Directors were implementing small rural work programs and federally funded Senators/MNA program. The town committees were run by nominated elders and Assistant Commissioner (formerly APA) as administrator under the administrative control of Local Council Board. Under LGO 2001, Union Councils were also notified for sitting ground for local government election which could not be held. However, in 2003-4, concept of nominated council in selected district of the Merged Areas was tried with limited power of monitoring of development schemes pertaining to health and education but the system did not work due to lack of political ownership and bureaucratic bottlenecks. Later, the concept of Tribal Areas Rural to Urban Centre Conversion Initiative was introduced by notifying 14 urban hubs because of which one more Municipal Committee of Khar Bajaur was established in 2014. After the historic merger in 2018 Government of Khyber Pakhtunkhwa extended Local Government (Amended), Act 2019 to all tribal districts.'
           '•	25 Tehsil Municipal Administration are established and fully functional providing basic municipal services to the residents,\n'
@@ -142,7 +142,8 @@ final lgDataEnglish = <Topic>[
       audioUrl: 'audio'),
   Topic(
       id: 17,
-      title: 'Comparison of LG, Act 2013, and LG (amended) Act 2019',
+      title:
+          'Comparison of Local Government, Act 2013, and Local Government (amended) Act 2019',
       description:
           'The Government of Khyber Pakhtunkhwa, due to policy shift and keeping in view the ease of public, decided to make amendment in the Local Government Act 2013 knows as Local Government Amendment Act 2019. Comparative analysis of Local Government Act 2013 and Local Government Amendment Act 2019 are as under with some of the key features:\n'
           'Local Government Act 2013 Structure:\n'
@@ -162,14 +163,14 @@ final lgDataEnglish = <Topic>[
       audioUrl: 'audio'),
   Topic(
       id: 18,
-      title: 'Constitution/Composition of Local Government ',
+      title: 'Constitution/Composition of Local Government',
       description:
           '•	Under the new local government system, two tiers system would be in place one at Tehsil and other at Village Council/Neighbourhood Council. The mode of election for Mayor and Chairman of Tehsil/City local government would be directly elected in each Tehsil as a single constituency. Chairman of each VC/NC would be a member of respective Tehsil/City Council.   As per new Local Government Amendment Act 2019, all the 7 divisional Head Quarter in Khyber Pakhtunkhwa will have City Local Government instead of Tehsil Local Government with few additional responsibilities.\n'
           '•	In each VC/NC there would be seven members directly elected from free list of candidates in non–party-based elections held based on adult franchise and joint electorate. Election of Chairman VC/NC will be out of three general members whosever score highest number of votes will become Chairman. Each VC/NC would comprise of three general members, one women member, one youth, one peasant worker and one minority member where minorities are registered as voters in the respective VC/NC. In case all general members are elected unopposed in VC/NC, then election for chairman will be held amongst all members of respective VC/NC, in a prescribed manner.\n',
       audioUrl: 'audio'),
   Topic(
       id: 19,
-      title: 'Key aspects of Local Government  ',
+      title: 'Key aspects of Local Government',
       description:
           'The local government is established for carrying out developmental activities at local levels and provision of basic civic amenities to the citizens through an elected system operated at local level as per mandated functions in the Local Government Amendment Act 2019. For any effective Local government, sufficient autonomy in political, administrative, and financial matters is must and for its existence. \n'
           '•	Approving byelaws for performance of functions devolved to respective local governments\n'
@@ -181,7 +182,7 @@ final lgDataEnglish = <Topic>[
       audioUrl: 'audio'),
   Topic(
       id: 20,
-      title: 'What is tehsil LG?',
+      title: 'Tehsil Local Government',
       description:
           'In every tehsil of a district there shall be a Tehsil Local Government which shall consist of the Chairman, Tehsil Local Government and Tehsil Local Administration.\n\n'
           ' 	The Chairman, Tehsil Local Government shall be directly elected on party-based elections, held based on adult franchise and joint electorate, within the whole of tehsil as single constituency for this purpose.\n'
@@ -192,7 +193,7 @@ final lgDataEnglish = <Topic>[
       audioUrl: 'audio'),
   Topic(
       id: 21,
-      title: 'Functions and Powers of Tehsil Council  ',
+      title: 'Functions and Powers of Tehsil Council',
       description:
           '•	Approve taxes, fines and penalties proposed by Chairman, Tehsil Local Government.'
           '•	Approve byelaws for delivery of services devolved to Tehsil Local Government.'
@@ -205,7 +206,7 @@ final lgDataEnglish = <Topic>[
       audioUrl: 'audo'),
   Topic(
       id: 22,
-      title: 'Functions and Powers of the Chairman Tehsil Local Government: ',
+      title: 'Functions and Powers of the Chairman Tehsil Local Government',
       description:
           '•	Provide vision for tehsil-wide development, leadership, and direction for efficient functioning of Tehsil Local Government. \n'
           '•	Formulate strategies and timeframe for accomplishment of goals regarding infrastructure development and improvement in delivery of services approved by Tehsil Council.\n'
@@ -225,13 +226,13 @@ final lgDataEnglish = <Topic>[
       audioUrl: 'audio'),
   Topic(
       id: 23,
-      title: 'Village Council /Neighbourhood Council: ',
+      title: 'Village Council /Neighbourhood Council',
       description:
           'Village Council/Neighbourhood Council is the lowest tier of local government with different mandate and functions assigned by Local Government Amendment Act 2019. A Village Council is the area with rural characteristics whereas in Neighbourhood Council is the area with urban features.',
       audioUrl: 'audio'),
   Topic(
       id: 24,
-      title: 'Functions of Village/Neighbourhood Councils: ',
+      title: 'Functions of Village/Neighbourhood Councils',
       description: '•	Implement and monitor village level development works.\n'
           '•	Carry out village level sanitation and conservancy functions in village councils only.\n'
           '•	Identify development needs of the area for use by Tehsil Local Government in prioritizing development plans for the tehsil.\n'
@@ -251,7 +252,7 @@ final lgDataEnglish = <Topic>[
   Topic(
       id: 25,
       title:
-          'Functions and responsibility of Chairman Village Council/Neighbourhood Council:',
+          'Functions and responsibility of Chairman Village Council/Neighbourhood Council',
       description:
           '•	Provide leadership for council-wide development and preparation of budget.\n'
           '•	Organize management of municipal infrastructure within the area of respective Village Council or Neighbourhood Council.\n'
@@ -264,13 +265,13 @@ final lgDataEnglish = <Topic>[
       audioUrl: 'audios'),
   Topic(
       id: 26,
-      title: 'Public role in VC/NC: ',
+      title: 'Public role in VC/NC',
       description:
           'Public role in VC/NC is most effective at the time of local bodies’ election. Public participates in different events and fare arranged by VC/NC for cleanliness and hygiene education. Public also participates for community awareness about birth and death registration process. Public participation in pre and post budget consultations arranged by VC/NC. VC/NC is held through formal notification by Election Commission of Pakistan in coordination with Provincial Coordination Unit in Local Government Elections & Rural Development Department before local bodies’ election or on need basis.',
       audioUrl: 'audio'),
   Topic(
       id: 27,
-      title: 'Delimitation: ',
+      title: 'Delimitation',
       description:
           'Delimitation is a process of demarcating the geographical boundaries into different VC/NC as per standard criteria of Election Commission of Pakistan for better administration. Once delimitation is done by Election Commission of Pakistan, a list of proposed VC/NC is formulated for the information of public at large.\n'
           'The public if aggrieved or feel that the delimitation is against the principle, formal appeal can be made to the appellate authority as notified by the ECP. Proper case is pleaded either in person or through a lawyer before the appellate authority whereby decision is made on facts and merit before the concerned parties. Tehsil is an administrative unit created by formal notification by Board of Revenue whereas VC/NC delimitation is primarily done for holding of local bodies’ election and polling schemes.',
@@ -278,7 +279,7 @@ final lgDataEnglish = <Topic>[
   Topic(
       id: 28,
       title:
-          'Village Council/Neighbourhood Council Secretaries and its functions: ',
+          'Village Council/Neighbourhood Council Secretaries and its functions',
       description:
           'Secretary Village/ Neighborhood Council is a government official at the VC/NC level whose main role is to provide secretarial support to council and Chairman VC/NC. \n'
           'Functions of Village Council /Neighbourhood Council Secretary: \n'
@@ -338,7 +339,7 @@ final lgDataEnglish = <Topic>[
       audioUrl: 'audio'),
   Topic(
       id: 31,
-      title: 'LG Elections',
+      title: 'Local Government Elections',
       description:
           '•	Election Commission of Pakistan (ECP) conducts the local government elections. However, in the Merged Areas, this will be the first ever election of local bodies as prior to this there was no proper/elected local government system in erstwhile FATA.\n'
           '•	After announcement of Election by provincial government, ECP makes necessary arrangement for holding of local bodies’ election as per mandated responsibility. Interestingly, the right of adult franchise had been given to the residents of the Merged Areas in 1997 election and prior to that only selected number of tribal elders (Jirga members) were eligible for election of only Member National Assembly of Pakistan. The Merged Areas had no representation in the provincial assembly as it was part of federally administered territories as per Constitution of Pakistan. The landmark passing of 25th amendment bill made the way for merger of tribal agency into Khyber Pakhtunkhwa, enabling it to participate in all general election including local bodes.\n'
@@ -391,7 +392,7 @@ final lgDataEnglish = <Topic>[
       audioUrl: 'audio'),
   Topic(
       id: 32,
-      title: 'Local Government Commission (LGC): ',
+      title: 'Local Government Commission (LGC)',
       description: '\nComposition of the Local Government Commission:\n'
           '1.	Minister Local Government Elections & Rural Development Department as a Chairman.\n'
           '2.	Two members, one nominated by the Chief Minister and one by the opposition leader of the provincial assembly.\n'
@@ -414,7 +415,7 @@ final lgDataEnglish = <Topic>[
       audioUrl: 'audio'),
   Topic(
       id: 33,
-      title: 'Provincial Finance Commission (PFC):',
+      title: 'Provincial Finance Commission (PFC)',
       description:
           'For distribution of public resources amongst Local government Amendment Act 2019, Khyber Pakhtunkhwa has a mechanism knows as PFC. The Finance Commission is headed by Minister Finance and Co-Chaired by Minister Local Government. The Commission comprises of two members of Provincial Assembly - one nominated by the Chief Minister and one by the opposition leader of the Provincial Assembly, Secretary Finance, Planning and Development, Law, Local Government and five Chairman of Tehsil Local Government or Mayor of City Local Government.\n'
           '\nFunctions of Provincial Finance Commission (PFC):\n\n'
@@ -426,7 +427,7 @@ final lgDataEnglish = <Topic>[
       audioUrl: 'audio'),
   Topic(
       id: 34,
-      title: 'Devolved Offices ',
+      title: 'Devolved Offices',
       description:
           'List of devolved offices to Tehsil Local Government of Local Government Amendment Act 2019.\n\n'
           '1.	Primary and Secondary Education \n'
@@ -445,7 +446,7 @@ final lgDataEnglish = <Topic>[
       audioUrl: 'audio'),
   Topic(
       id: 35,
-      title: 'Citizen Facilitation Centers (CFC): ',
+      title: 'Citizen Facilitation Centers (CFC)',
       description:
           'Provincial Disaster Management Authority (PDMA) with assistance of World Bank has established 27 CFC in the Merged Areas of Khyber Pakhtunkhwa. This is a one stop shop with a long list of facilities to offer in due course of time for facilitating the residents of the Merged Areas. Currently, the following services are available:\n\n'
           '1.	Issuance of CNIC:\nCNIC is unique 13-digit identification number recognized all over the country. It is the first requirement of individuals as it is mandatory to obtain documents like license, NTN, bank account, passport, cellular connection etc. Every citizen of Pakistan, 18 years and above, is eligible for CNIC. To get an CNIC following documents are required: \n'
@@ -464,7 +465,7 @@ final lgDataEnglish = <Topic>[
       audioUrl: 'audio'),
   Topic(
       id: 36,
-      title: 'Role of District Administration ',
+      title: 'Role of District Administration',
       description:
           'Deputy Commissioner is the principal representative of Provincial Government. Provincial Government may provide guidelines and render advice for achieving the ends of the government policy and for promoting economic, social, and environmental security through District Administration. Deputy Commissioner is responsible for the maintenance of law and order in the district.\n'
           'The Chairman of the Tehsil Local Government coordinates where required with District Administration for district wide development and delivery of services under the Local Government Amendment Act of 2019.\n'
@@ -486,7 +487,7 @@ final lgDataEnglish = <Topic>[
       audioUrl: 'audio'),
   Topic(
       id: 38,
-      title: 'Assistant Director Local Government:',
+      title: 'Assistant Director Local Government',
       description:
           'The Assistant Director, Local Government is responsible for coordinating matters relating to secretarial functions of Village Council and Neighbourhood Councils for his respective district.\n\n'
           'The Assistant Director, Local Government has the regulatory and administrative functions to ensure that all VC/NCs in district perform their roles and functions within the policy framework of Local Government Amendment Act 2019.\n\n'
@@ -495,7 +496,7 @@ final lgDataEnglish = <Topic>[
       audioUrl: 'audio'),
   Topic(
       id: 39,
-      title: 'Tehsil Municipal Officer (TMO):',
+      title: 'Tehsil Municipal Officer (TMO)',
       description:
           'Tehsil Municipal Officer (TMO) is the Principal Accounting Officer of the Tehsil Municipal Administration (TMA) and is responsible to Tehsil Local Government/City Local Government. TMO main functions are:\n'
           '   •	For the purpose of budget allocation and execution, TMO is the Drawing and Disbursement Officer (DDO) for respective Tehsil Local Government/City Local Government\n'
@@ -508,7 +509,7 @@ final lgDataEnglish = <Topic>[
       audioUrl: 'audio'),
   Topic(
       id: 40,
-      title: 'Member Provincial Assembly: ',
+      title: 'Member Provincial Assembly',
       description:
           'Member of a Provincial Assembly is a representative elected by the voters of an electoral district or part thereof to the provincial assembly of the respective area. Main functions of MPA are: \n'
           '•	Provincial Legislation \n'
@@ -518,7 +519,7 @@ final lgDataEnglish = <Topic>[
       audioUrl: 'audio'),
   Topic(
       id: 41,
-      title: 'Member National Assembly:',
+      title: 'Member National Assembly',
       description:
           'Member of National Assembly is an elected member or representative of National Assembly of the lower house of the Parliament of Pakistan. There are 342 members of National Assembly, out of which 70 are reserved for women and religious minorities MNA’s in Pakistan and remaining are seat for general members. In Pakistan there is only one National Assembly which elects the Prime Minister of Pakistan through a voting in the National Assembly. The tenure of National Assembly is five years from the date of taking oath. Main functions of MNA are: \n'
           '•	National Level Legislation \n'
@@ -528,7 +529,7 @@ final lgDataEnglish = <Topic>[
       audioUrl: 'audio'),
   Topic(
       id: 42,
-      title: 'Khyber Pakhtunkhwa Right to Information Act, 2013: ',
+      title: 'Khyber Pakhtunkhwa Right to Information Act, 2013',
       description:
           'The right to know is a basic human nature and this desire has been one of the basic reasons of friction between the rulers and the ruled, throughout human history. Whether the public has a right to know that how the rulers are taking decisions, has been the subject of discussion over the centuries. Same has been the case in Pakistan as well where rulers would always shy away to share basic information pertaining to the well-being of the common residents resultantly over the years it was realized by the people who rule or being ruled that all the information pertaining to well-being of residents be shared with them, as and when desired or in a routine manner to ensure transparency and good governance. The journey which started from Freedom of Information took almost a decade to become Right to Information during which Article 19-A was inserted into the Constitution of Pakistan thus making it a Constitutional Right of every citizen of Pakistan, post 18th amendment. The province of Khyber Pakhtunkhwa took the lead to formalize this right and the provincial Government deserves an honorable mention in passing this law back in 2013.The right to Information act is playing important role in improving governance and is considered the most effective tool to: \n'
           '•	Improve government’s functioning\n'
@@ -546,7 +547,7 @@ final lgDataEnglish = <Topic>[
       audioUrl: 'audio'),
   Topic(
       id: 43,
-      title: 'Process for Right to Information: ',
+      title: 'Process for Right to Information',
       description:
           'Any document which public offices hold in any form is declared a public record and citizens while using the specific provisions of the respective law can access the information either from the website or through submission of an application to respective department. After the promulgation of KPRTI Act, 2013 each department has designated Public Information Officer (PIO) who   is bound to entertain such requests received from public which help in promoting the culture of public disclosure of information.  \n'
           'The applicant applies (information request) to PIO of the department for provision of specific record. The KPRTI Act, 2013 enables each citizen to ask for such like information as and when needed. There are three categories of information to be provided: \n'
@@ -556,13 +557,13 @@ final lgDataEnglish = <Topic>[
       audioUrl: 'audio'),
   Topic(
       id: 44,
-      title: 'Right to Information Commission: ',
+      title: 'Right to Information Commission',
       description:
           'In case the PIO or department fails to provide relevant information to the applicant within stipulated period. The government has set up a proper Commission at provincial level with divisional set up for the ease of public, legal platform for redressal of their grievances regarding provision of public information.  As evident from picture below that complainant apply to Commission that such and such department has failed to provide him /her information asked vide copy of the previous application. There after the Commission holds an enquiry for fact finding and issue directions to concerned department for provision of information to the applicant, within 60 days of his/her submission of application. \n',
       audioUrl: 'audio'),
   Topic(
       id: 45,
-      title: 'Khyber Pakhtunkhwa Right to Public Services Act, 2014 ',
+      title: 'Khyber Pakhtunkhwa Right to Public Services Act, 2014',
       description:
           'The Government of Khyber Pakhtunkhwa introduced as a part of good governance agenda in the province, KP Right to Public Services Act, 2014. The sole objective of this law was to improve public service delivery in the largest public interest. The law provides for:\n'
           '•	Time bound delivery of public services to citizens.\n'
@@ -572,7 +573,7 @@ final lgDataEnglish = <Topic>[
       audioUrl: 'audio'),
   Topic(
       id: 46,
-      title: 'Right to Public Services Commission: ',
+      title: 'Right to Public Services Commission',
       description:
           'The Government of Khyber Pakhtunkhwa under the KP Right to Services Act, 2014 had established a statutory body headed by Chief Commissioner with two Commissioners along with supporting staff for ensuring that notified services are provided to the residents without fail and any hindrances.  The core functions of Commission are to, through office of District Monitoring Officers (DMOs) in each district, monitor administration of notified public services with focus on specified timelines, quality, and transparency. So far 41 basic services, sub services are notified. Range of services is quite broad and includes Revenue, health, security, domicile, licenses, and municipal services. Commissioners and Deputy Commissioners have been declared as Chairperson of Divisional and District Steering Committees, respectively. \n'
           'How to Submit Complaint to KP Services Commission: \n'
@@ -581,7 +582,7 @@ final lgDataEnglish = <Topic>[
       audioUrl: 'audio'),
   Topic(
       id: 47,
-      title: 'Tribal Decades Strategy (TDS): ',
+      title: 'Tribal Decades Strategy (TDS)',
       description:
           'After the historical merger of erstwhile FATA into Khyber Pakhtunkhwa, first measure undertaken by Government of Khyber Pakhtunkhwa was to have a detailed and widespread consultations, paving way to put in place a framework for bridging the gaps both in institutional set up and socioeconomic development of the region. A perusal of the available statistics of erstwhile FATA indicates that most of the socioeconomic indicators were lagging compared to Khyber Pakhtunkhwa. For example, 60% of the people were living below the line of poverty. Literacy ratio was 49 % for male and 14 % for female. Similarly, other indicators of clean drinking water, infant mortality rate, mother morbidity rate were far below than average ratio of Khyber Pakhtunkhwa  and Pakistan. \n'
           'All these things coupled with lack of institutional framework and essential infrastructure it was felt necessary that some urgent steps are taken for filling this yawning gap of socioeconomic and institutional development in a befitting manner. Accordingly, a ten-year development strategy was designed known as Tribal Decades Strategy (2020-2030) with clear commitment of federal government for providing yearly special grant of at least Rs. 100 billion every year for the next ten year.  The Tribal Decade Strategy (TDS) 2020-2030 aims at redressing the imbalance to bring the tribal people at par with the rest of the country. The provincial cabinet in its meeting held on 9th May 2019, approved the Tribal Decade Strategy. Finalization of the TDS has tapped the beneficiary perspective through deeper consultations to align all planned development with resident needs and priorities. TDS is supported through five pillar of the Development Pentad that forms the basic organizational principles of the developmental approach. The pentad is as follows:\n'
@@ -597,13 +598,13 @@ final lgDataEnglish = <Topic>[
       audioUrl: 'audio'),
   Topic(
       id: 48,
-      title: 'Prime Minister Citizen’s Portal: ',
+      title: 'Prime Minister Citizen’s Portal',
       description:
           'Pakistan Citizen’s Portal (PCP) is a government owned mobile application and is being used as a tool to promote citizen-centric and participatory governance. Which are basically complaints and grievance redressal mechanism with special emphasis on facilitation of overseas Pakistanis, women, special persons, and foreigners and public at large. The primary objective of the portal is to provide citizens\' an opportunity to seamlessly communicate with all government entities and have their issues resolved with priority, in accordance with the vision of the Government.',
       audioUrl: 'audio'),
   Topic(
       id: 49,
-      title: 'HOW TO USE Pakistan Citizen Portal Application: ',
+      title: 'HOW TO USE Pakistan Citizen Portal Application',
       description:
           'The mobile application can be used after downloading it from website as following procedure: \n'
           '\n•	Download and install the Pakistan Citizen\'s Portal app\n'

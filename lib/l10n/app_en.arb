@@ -1,5 +1,6 @@
 {   
-    "feedback_form": "Feedback Form",
+    "feedback_form": "Feedback",
+    "contact_details": "Contact Details",
     "name": "Name",
     "enter_your_name": "Enter Your Name",
     "contact_no": "Contact No",
@@ -27,6 +28,11 @@
     "this_field_is_mandatory": "This field is mandatory",
     "kindly_provide_some_details_about_complaint": "Kindly provide some details about your complaint.",
     "perimission_denied": "Permission denied!",
-    "search_topics": "Search Topics"
+    "search_topics": "Search Topics",
+    "are_you_sure": "Are you sure?",
+    "do_you_want_to_exit": "Do you really want to exit?",
+    "yes": "Yes",
+    "no": "No",
+    "contact_us": "Contact us"
     
 }

@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:lgs_audiopedia/common/contact_drawer.dart';
 
 import 'package:lgs_audiopedia/common/header.dart';
 import 'package:lgs_audiopedia/screens/english_screens/Dengue_screens/village_counsel_dengue.dart';
 import 'package:lgs_audiopedia/screens/english_screens/lg_screens_english/village_counsel_lg_eng.dart';
 import 'package:lgs_audiopedia/screens/english_screens/village_counsel.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class CovidLgs extends StatelessWidget {
   const CovidLgs({Key? key}) : super(key: key);
@@ -14,6 +16,45 @@ class CovidLgs extends StatelessWidget {
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
     final _scaffoldKey = GlobalKey<ScaffoldState>();
+
+    Future exitDialog() {
+      return showDialog(
+          context: context,
+          builder: (context) => AlertDialog(
+                // title: Text(
+                //   AppLocalizations.of(context)!.are_you_sure,
+                // ),
+                content: Text(
+                  AppLocalizations.of(context)!.do_you_want_to_exit,
+                ),
+                actions: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      ElevatedButton(
+                          style: ButtonStyle(
+                            backgroundColor:
+                                MaterialStateProperty.all(Color(0xff35016D)),
+                          ),
+                          onPressed: () {
+                            Navigator.of(context).pop(false);
+                          },
+                          child: Text(
+                            AppLocalizations.of(context)!.no,
+                          )),
+                      TextButton(
+                          onPressed: () {
+                            SystemNavigator.pop();
+                          },
+                          child: Text(
+                            AppLocalizations.of(context)!.yes,
+                          )),
+                    ],
+                  )
+                ],
+              ));
+    }
+
     return Scaffold(
         key: _scaffoldKey,
         drawer: ContactDrawer(),

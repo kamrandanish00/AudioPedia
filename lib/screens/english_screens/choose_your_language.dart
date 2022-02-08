@@ -1,5 +1,6 @@
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 // import 'package:lgs_audiopedia/common/custom_drawer.dart';
 import 'package:lgs_audiopedia/common/custom_end_drawer.dart';
@@ -10,6 +11,7 @@ import 'package:lgs_audiopedia/screens/english_screens/covid_lgs.dart';
 import 'package:lgs_audiopedia/screens/pashto_screen/covid_lg_pashto.dart';
 import 'package:lgs_audiopedia/screens/urdo_screens/covid_lg_urdo.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class ChooseYourLanguage extends StatefulWidget {
   const ChooseYourLanguage({Key? key}) : super(key: key);
@@ -19,6 +21,44 @@ class ChooseYourLanguage extends StatefulWidget {
 }
 
 class _ChooseYourLanguageState extends State<ChooseYourLanguage> {
+  Future exitDialog() {
+    return showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+              // title: Text(
+              //   AppLocalizations.of(context)!.are_you_sure,
+              // ),
+              content: Text(
+                AppLocalizations.of(context)!.do_you_want_to_exit,
+              ),
+              actions: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    ElevatedButton(
+                        style: ButtonStyle(
+                          backgroundColor:
+                              MaterialStateProperty.all(Color(0xff35016D)),
+                        ),
+                        onPressed: () {
+                          Navigator.of(context).pop(false);
+                        },
+                        child: Text(
+                          AppLocalizations.of(context)!.no,
+                        )),
+                    TextButton(
+                        onPressed: () {
+                          SystemNavigator.pop();
+                        },
+                        child: Text(
+                          AppLocalizations.of(context)!.yes,
+                        )),
+                  ],
+                )
+              ],
+            ));
+  }
+
   @override
   void initState() {
     super.initState();
@@ -95,104 +135,78 @@ class _ChooseYourLanguageState extends State<ChooseYourLanguage> {
     final widht = MediaQuery.of(context).size.width;
     return Scaffold(
       key: _scaffoldKey,
-      // appBar: AppBar(),
-      // drawer: CustomDrawer(),
 
-      //custom end drawer
-      // endDrawer: CustomEndDrawer(),
       drawer: CustomEndDrawer(),
 
       backgroundColor: Color(0xff35016D),
-      body: Stack(
-        children: [
-          Column(
-            children: [
-              Header(),
-              Spacer(),
-              GestureDetector(
-                // borderRadius: BorderRadius.circular(15),
-                onTap: () {
-                  // provider.setLocale(Locale('eng'));
+      body: WillPopScope(
+        onWillPop: () {
+          exitDialog();
+          return Future.value(false);
+        },
+        child: Stack(
+          children: [
+            Column(
+              children: [
+                Header(),
+                Spacer(),
+                GestureDetector(
+                  // borderRadius: BorderRadius.circular(15),
+                  onTap: () {
+                    // provider.setLocale(Locale('eng'));
+                    final provider =
+                        Provider.of<LocaleProvider>(context, listen: false);
+                    provider.setLocale(Locale('en'));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (ctx) => CovidLgs()));
+                  },
+                  child: LanguageBtn(txt: 'ENG'),
+                ),
+                SizedBox(
+                  height: height * 0.04,
+                ),
+                GestureDetector(
+                    onTap: () {
+                      // for localization
+                      final provider =
+                          Provider.of<LocaleProvider>(context, listen: false);
+                      provider.setLocale(Locale('ur'));
+                      // provider.setLocale(Locale('ps'));
+                      Navigator.of(context).push(
+                          MaterialPageRoute(builder: (ctx) => CovidLgUrdo()));
+                    },
+                    child: LanguageBtn(txt: 'اردو')),
+                SizedBox(
+                  height: height * 0.04,
+                ),
+                GestureDetector(
+                  onTap: () {
+                    provider.setLocale(Locale('ps'));
+                    Navigator.of(context).push(
+                        MaterialPageRoute(builder: (ctx) => CovidLgPashto()));
+                  },
+                  child: LanguageBtn(
+                    txt: 'پښتو',
+                  ),
+                ),
+                Spacer(),
+              ],
+            ),
+            Positioned(
+              top: height * 0.11,
+              child: IconButton(
+                color: Colors.white,
+                onPressed: () {
+                  _scaffoldKey.currentState!.openDrawer();
                   final provider =
                       Provider.of<LocaleProvider>(context, listen: false);
                   provider.setLocale(Locale('en'));
-                  Navigator.push(
-                      context, MaterialPageRoute(builder: (ctx) => CovidLgs()));
                 },
-                child: LanguageBtn(txt: 'ENG'),
+                icon: Icon(Icons.menu),
               ),
-              SizedBox(
-                height: height * 0.04,
-              ),
-              GestureDetector(
-                  onTap: () {
-                    // for localization
-                    final provider =
-                        Provider.of<LocaleProvider>(context, listen: false);
-                    provider.setLocale(Locale('ur'));
-                    // provider.setLocale(Locale('ps'));
-                    Navigator.of(context).push(
-                        MaterialPageRoute(builder: (ctx) => CovidLgUrdo()));
-                  },
-                  child: LanguageBtn(txt: 'اردو')),
-              SizedBox(
-                height: height * 0.04,
-              ),
-              // BtnContainer(
-              //   txt: 'پښتو',
-              // ),
-              // CircleAvatar(
-              //   radius: height * 0.075,
-              //   backgroundColor: Colors.white,
-              //   child: Container(
-              //     height: height * 0.26,
-              //     width: widht * 0.27,
-              //     alignment: Alignment.center,
-              //     decoration: BoxDecoration(
-              //       color: Colors.white,
-              //       shape: BoxShape.circle,
-              //       border: Border.all(
-              //         color: Color(0xff35016D),
-              //         width: 3,
-              //       ),
-              //     ),
-              //     child: Text(
-              //       'پښتو',
-              //       style: TextStyle(
-              //         fontSize: 26,
-              //         fontWeight: FontWeight.bold,
-              //         color: Color(0xff35016D),
-              //       ),
-              //     ),
-              //   ),
-              // ),
-              GestureDetector(
-                onTap: () {
-                  provider.setLocale(Locale('ps'));
-                  Navigator.of(context).push(
-                      MaterialPageRoute(builder: (ctx) => CovidLgPashto()));
-                },
-                child: LanguageBtn(
-                  txt: 'پښتو',
-                ),
-              ),
-              Spacer(),
-            ],
-          ),
-          Positioned(
-            top: height * 0.11,
-            child: IconButton(
-              color: Colors.white,
-              onPressed: () {
-                _scaffoldKey.currentState!.openDrawer();
-                final provider =
-                    Provider.of<LocaleProvider>(context, listen: false);
-                provider.setLocale(Locale('en'));
-              },
-              icon: Icon(Icons.menu),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
       // floatingActionButton: FloatingActionButton(
       //   onPressed: showNotification,
