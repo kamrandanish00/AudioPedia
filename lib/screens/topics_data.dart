@@ -272,5 +272,31 @@ final allTopics = <Topic>[
           '7. Provide clear information: to help the person understand the situation, make sure that you use words they can understand (not complicated words). Keep the message simple and repeat it or write it down if needed. Ask them if they understand or have any questions.\n'
           '8 Stay with the person: Try not to leave the person alone. If you can’t stay with them, find a safe person (a colleague, a friend or relative) to be with patient until you find help or they feel calmer.\n'
           ' 9. Refer the patient to specialized support: If it is felt that patient needs specialized care and advice it is better to inform his/her family for proper treatment from qualified mental health profession to avoid compilations.\n',
-      audioUrl: 'audio')
+      audioUrl: 'audio'),
+  Topic(
+    id: 21,
+    title: 'Myths about COVID-19 Vaccination',
+    description:
+        'Various myths are associated with administration of coronavirus vaccination such as infertility, fixing of chip in body, deterioration of female health, destroying the body organs etc. which has created a panic among the public. Now that CVOID-19 vaccines have reached billions of people around the globe including Pakistan, the evidence of success is overwhelming. The coronavirus vaccines offer life-saving protection against the disease that has killed millions in just 2 years. Moreover, any possible risks that may exist are considerably lower than those associated with COVID-19 infection.',
+    audioUrl: 'audio',
+  ),
+  Topic(
+    id: 22,
+    title: 'Avoid Sharing following things When You Have COVID-19',
+    description: '•	Avoid sharing food.\n'
+        '•	Avoid sharing drinks.\n'
+        '•	Avoid sharing dishes.\n'
+        '•	Avoid sharing towels.\n',
+    audioUrl: 'audio',
+  ),
+  Topic(
+    id: 23,
+    title: 'Wash Your Hands Often',
+    description: '•	Wash your hands before touching your mouth.\n'
+        '•	Wash your hands before touching your eyes.\n'
+        '•	Wash your hands before touching your eyes.\n'
+        '•	Wash your hands with soap and water.\n'
+        '•	Wash your hands at least for 20 seconds and properly rinse.\n',
+    audioUrl: 'audio',
+  )
 ];
