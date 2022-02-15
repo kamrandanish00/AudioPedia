@@ -153,6 +153,20 @@ class TehsilCounselUrdo extends StatelessWidget {
               ),
             ),
           ),
+          //go back
+          Positioned(
+            top: height * 0.11,
+            child: IconButton(
+              color: Colors.white,
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              icon: Icon(
+                // Icons.arrow_back_ios_new_rounded,
+                Icons.arrow_back_ios,
+              ),
+            ),
+          ),
         ],
       ),
     );

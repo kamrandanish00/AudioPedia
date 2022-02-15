@@ -1,7 +1,7 @@
-import 'package:firebase_messaging/firebase_messaging.dart';
+// import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+// import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 // import 'package:lgs_audiopedia/common/custom_drawer.dart';
 import 'package:lgs_audiopedia/common/custom_end_drawer.dart';
 import 'package:lgs_audiopedia/common/header.dart';
@@ -63,66 +63,66 @@ class _ChooseYourLanguageState extends State<ChooseYourLanguage> {
   void initState() {
     super.initState();
 
-    FirebaseMessaging.onMessage.listen((RemoteMessage message) {
-      RemoteNotification? notification = message.notification;
-      AndroidNotification? android = message.notification?.android;
-      if (notification != null && android != null) {
-        flutterLocalNotificationsPlugin.show(
-            notification.hashCode,
-            notification.title,
-            notification.body,
-            NotificationDetails(
-                android: AndroidNotificationDetails(
-              channel.id,
-              channel.name,
-              // channel.description,
-              color: Colors.blue,
-              playSound: true,
-              // icon:
-            )));
-      }
-    });
+    // FirebaseMessaging.onMessage.listen((RemoteMessage message) {
+    //   RemoteNotification? notification = message.notification;
+    //   AndroidNotification? android = message.notification?.android;
+    //   if (notification != null && android != null) {
+    //     flutterLocalNotificationsPlugin.show(
+    //         notification.hashCode,
+    //         notification.title,
+    //         notification.body,
+    //         NotificationDetails(
+    //             android: AndroidNotificationDetails(
+    //           channel.id,
+    //           channel.name,
+    //           // channel.description,
+    //           color: Colors.blue,
+    //           playSound: true,
+    //           // icon:
+    //         )));
+    //   }
+    // });
 
-    FirebaseMessaging.onMessageOpenedApp.listen((RemoteMessage message) {
-      print('A new onMessageOpenedApp event was published');
-      RemoteNotification? notification = message.notification;
-      AndroidNotification? android = message.notification?.android;
-      if (notification != null && android != null) {
-        showDialog(
-            context: context,
-            builder: (_) {
-              return AlertDialog(
-                title: Text(notification.title!),
-                content: SingleChildScrollView(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(notification.body!),
-                    ],
-                  ),
-                ),
-              );
-            });
-      }
-    });
+    // FirebaseMessaging.onMessageOpenedApp.listen((RemoteMessage message) {
+    //   print('A new onMessageOpenedApp event was published');
+    //   RemoteNotification? notification = message.notification;
+    //   AndroidNotification? android = message.notification?.android;
+    //   if (notification != null && android != null) {
+    //     showDialog(
+    //         context: context,
+    //         builder: (_) {
+    //           return AlertDialog(
+    //             title: Text(notification.title!),
+    //             content: SingleChildScrollView(
+    //               child: Column(
+    //                 crossAxisAlignment: CrossAxisAlignment.start,
+    //                 children: [
+    //                   Text(notification.body!),
+    //                 ],
+    //               ),
+    //             ),
+    //           );
+    //         });
+    //   }
+    // });
   }
 
-  void showNotification() {
-    flutterLocalNotificationsPlugin.show(
-        0,
-        'Testing notification',
-        'how you doing ?',
-        NotificationDetails(
-            android: AndroidNotificationDetails(
-          channel.id,
-          channel.name,
-          // channel.description,
-          importance: Importance.high,
-          color: Colors.blue,
-          playSound: true,
-          // icon:
-        )));
-  }
+  // void showNotification() {
+  //   flutterLocalNotificationsPlugin.show(
+  //       0,
+  //       'Testing notification',
+  //       'how you doing ?',
+  //       NotificationDetails(
+  //           android: AndroidNotificationDetails(
+  //         channel.id,
+  //         channel.name,
+  //         // channel.description,
+  //         importance: Importance.high,
+  //         color: Colors.blue,
+  //         playSound: true,
+  //         // icon:
+  //       )));
+  // }
 
   final _scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -202,9 +202,26 @@ class _ChooseYourLanguageState extends State<ChooseYourLanguage> {
                       Provider.of<LocaleProvider>(context, listen: false);
                   provider.setLocale(Locale('en'));
                 },
-                icon: Icon(Icons.menu),
+                icon: Icon(
+                  Icons.menu,
+                ),
+                // alignment: Alignment.centerRight,
               ),
             ),
+            // //go back
+            // Positioned(
+            //   top: height * 0.11,
+            //   child: IconButton(
+            //     color: Colors.white,
+            //     onPressed: () {
+            //       Navigator.of(context).pop();
+            //     },
+            //     icon: Icon(
+            //       Icons.arrow_back_ios_new_rounded,
+            //     ),
+            //     alignment: Alignment.centerLeft,
+            //   ),
+            // ),
           ],
         ),
       ),

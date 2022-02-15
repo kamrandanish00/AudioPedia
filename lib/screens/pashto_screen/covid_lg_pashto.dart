@@ -144,14 +144,44 @@ class CovidLgPashto extends StatelessWidget {
                 // Spacer(),
               ],
             ),
+            // Positioned(
+            //   top: MediaQuery.of(context).size.height * 0.11,
+            //   child: IconButton(
+            //     onPressed: () => _scaffoldKey.currentState!.openDrawer(),
+            //     icon: Icon(
+            //       Icons.menu,
+            //       color: Colors.white,
+            //     ),
+            //   ),
+            // ),
+
+            //
             Positioned(
-              top: MediaQuery.of(context).size.height * 0.11,
-              child: IconButton(
-                onPressed: () => _scaffoldKey.currentState!.openDrawer(),
-                icon: Icon(
-                  Icons.menu,
-                  color: Colors.white,
-                ),
+              width: width * 0.99,
+              top: height * 0.11,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  //go back
+                  IconButton(
+                    color: Colors.white,
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                    },
+                    icon: Icon(
+                      // Icons.arrow_back_ios_new_rounded,
+                      Icons.arrow_back_ios,
+                    ),
+                  ),
+                  // Spacer(),
+                  IconButton(
+                    onPressed: () => _scaffoldKey.currentState!.openDrawer(),
+                    icon: Icon(
+                      Icons.menu,
+                      color: Colors.white,
+                    ),
+                  ),
+                ],
               ),
             ),
           ],

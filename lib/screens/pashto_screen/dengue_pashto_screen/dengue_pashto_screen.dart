@@ -106,20 +106,24 @@ class _TopicsOfDenguePashto extends State<TopicsOfDenguePashto> {
           Row(
             // mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              IconButton(
-                onPressed: () {
-                  Navigator.of(context).pop();
-                },
-                icon: Icon(Icons.arrow_back),
-                color: Color(0xff35016D),
-                iconSize: screenHeight * 0.08,
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.05),
+                child: IconButton(
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  // icon: Icon(Icons.arrow_back),
+                  icon: Icon(Icons.arrow_back_ios),
+                  color: Color(0xff35016D),
+                  iconSize: screenHeight * 0.06,
+                ),
               ),
               SizedBox(
                 width: screenWidth * 0.22,
               ),
               Text(
                 // topicData[0].title,
-                'کورونا وائرس',
+                ' جنرل',
                 style: TextStyle(
                   fontSize: fontSize * 30,
                   fontWeight: FontWeight.bold,

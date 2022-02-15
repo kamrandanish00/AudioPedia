@@ -116,6 +116,7 @@ class CovidLgs extends StatelessWidget {
               ],
             ),
             Positioned(
+              right: MediaQuery.of(context).size.height * 0.03,
               top: MediaQuery.of(context).size.height * 0.11,
               child: IconButton(
                 onPressed: () => _scaffoldKey.currentState!.openDrawer(),
@@ -123,6 +124,17 @@ class CovidLgs extends StatelessWidget {
                   Icons.menu,
                   color: Colors.white,
                 ),
+              ),
+            ),
+            //go back
+            Positioned(
+              top: height * 0.11,
+              child: IconButton(
+                color: Colors.white,
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+                icon: Icon(Icons.arrow_back_ios_new_rounded),
               ),
             ),
           ],

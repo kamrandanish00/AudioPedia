@@ -4,7 +4,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:image_picker/image_picker.dart';
+// import 'package:image_picker/image_picker.dart';
 import 'package:lgs_audiopedia/common/form_submitted_screen.dart';
 import 'package:lgs_audiopedia/common/header.dart';
 
@@ -259,32 +259,32 @@ class _FeedbackFormState extends State<FeedbackForm> {
   // }
   //
   File? image;
-  Future pickImageFromCamera() async {
-    try {
-      final image = await ImagePicker().pickImage(source: ImageSource.camera);
-      if (image == null) return;
-      final imageTemporary = File(image.path);
-      setState(() {
-        this.image = imageTemporary;
-      });
-    } on PlatformException catch (e) {
-      print('Failed to pick image: $e');
-    }
-  }
+  // Future pickImageFromCamera() async {
+  //   try {
+  //     final image = await ImagePicker().pickImage(source: ImageSource.camera);
+  //     if (image == null) return;
+  //     final imageTemporary = File(image.path);
+  //     setState(() {
+  //       this.image = imageTemporary;
+  //     });
+  //   } on PlatformException catch (e) {
+  //     print('Failed to pick image: $e');
+  //   }
+  // }
 
   //image from gallery johnness milke
-  Future pickImageGallery() async {
-    try {
-      final image = await ImagePicker().pickImage(source: ImageSource.gallery);
-      if (image == null) return;
-      final imageTemperoray = File(image.path);
-      setState(() {
-        this.image = imageTemperoray;
-      });
-    } on PlatformException catch (e) {
-      print('Faild to pick image from gallery $e');
-    }
-  }
+  // Future pickImageGallery() async {
+  //   try {
+  //     final image = await ImagePicker().pickImage(source: ImageSource.gallery);
+  //     if (image == null) return;
+  //     final imageTemperoray = File(image.path);
+  //     setState(() {
+  //       this.image = imageTemperoray;
+  //     });
+  //   } on PlatformException catch (e) {
+  //     print('Faild to pick image from gallery $e');
+  //   }
+  // }
 
   // _imgFromGallery() async {
   //   XFile? image = await ImagePicker()
@@ -296,37 +296,37 @@ class _FeedbackFormState extends State<FeedbackForm> {
   // }
 
   // choose camera or gallery choice for user
-  void _showPicker(context) {
-    showModalBottomSheet(
-        context: context,
-        builder: (BuildContext bc) {
-          return SafeArea(
-            child: Container(
-              child: new Wrap(
-                children: <Widget>[
-                  new ListTile(
-                      leading: new Icon(Icons.photo_library),
-                      title: new Text('Photo Library'),
-                      onTap: () {
-                        pickImageGallery();
-                        Navigator.of(context).pop();
-                      }),
-                  new ListTile(
-                    leading: new Icon(Icons.photo_camera),
-                    title: new Text('Camera'),
-                    onTap: () {
-                      // _imgFromCamera();
-                      pickImageFromCamera();
+  // void _showPicker(context) {
+  //   showModalBottomSheet(
+  //       context: context,
+  //       builder: (BuildContext bc) {
+  //         return SafeArea(
+  //           child: Container(
+  //             child: new Wrap(
+  //               children: <Widget>[
+  //                 new ListTile(
+  //                     leading: new Icon(Icons.photo_library),
+  //                     title: new Text('Photo Library'),
+  //                     onTap: () {
+  //                       pickImageGallery();
+  //                       Navigator.of(context).pop();
+  //                     }),
+  //                 new ListTile(
+  //                   leading: new Icon(Icons.photo_camera),
+  //                   title: new Text('Camera'),
+  //                   onTap: () {
+  //                     // _imgFromCamera();
+  //                     pickImageFromCamera();
 
-                      Navigator.of(context).pop();
-                    },
-                  ),
-                ],
-              ),
-            ),
-          );
-        });
-  }
+  //                     Navigator.of(context).pop();
+  //                   },
+  //                 ),
+  //               ],
+  //             ),
+  //           ),
+  //         );
+  //       });
+  // }
 
   //build method
   final _formKey = GlobalKey<FormState>();
@@ -1175,7 +1175,7 @@ class _FeedbackFormState extends State<FeedbackForm> {
                                             GestureDetector(
                                               onTap: () {
                                                 // pickImageFromCamera();
-                                                _showPicker(context);
+                                                // _showPicker(context);
                                               },
                                               child: image == null
                                                   ? Container(

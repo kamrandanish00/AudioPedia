@@ -101,13 +101,33 @@ class _TopicsPashtoState extends State<TopicsPashto> {
           Row(
             // mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              IconButton(
-                onPressed: () {
-                  Navigator.of(context).pop();
-                },
-                icon: Icon(Icons.arrow_back),
-                color: Color(0xff35016D),
-                iconSize: screenHeight * 0.08,
+              // IconButton(
+              //   onPressed: () {
+              //     Navigator.of(context).pop();
+              //   },
+              //   icon: Icon(Icons.arrow_back),
+              //   color: Color(0xff35016D),
+              //   iconSize: screenHeight * 0.08,
+              // ),
+
+              //new icon
+              //go back
+              Padding(
+                padding: EdgeInsets.symmetric(
+                  horizontal: screenWidth * 0.04,
+                ),
+                child: IconButton(
+                  color: Colors.white,
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  icon: Icon(
+                    // Icons.arrow_back_ios_new_rounded,
+                    Icons.arrow_back_ios,
+                    color: Color(0xff35016D),
+                    size: screenHeight * 0.06,
+                  ),
+                ),
               ),
               // SizedBox(
               //   width: screenWidth * 0.22,

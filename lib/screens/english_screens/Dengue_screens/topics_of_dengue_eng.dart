@@ -96,13 +96,16 @@ class _TopicsOfDengueEngState extends State<TopicsOfDengueEng> {
           Row(
             // mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              IconButton(
-                onPressed: () {
-                  Navigator.of(context).pop();
-                },
-                icon: Icon(Icons.arrow_back),
-                color: Color(0xff35016D),
-                iconSize: screenHeight * 0.08,
+              Padding(
+                padding: EdgeInsets.only(left: screenWidth * 0.03),
+                child: IconButton(
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  icon: Icon(Icons.arrow_back_ios),
+                  color: Color(0xff35016D),
+                  iconSize: screenHeight * 0.08,
+                ),
               ),
               // SizedBox(
               //   width: screenWidth * 0.22,

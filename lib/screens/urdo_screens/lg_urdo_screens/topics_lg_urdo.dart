@@ -106,13 +106,17 @@ class _TopicsLGUrdoState extends State<TopicsLGUrdo> {
           Row(
             // mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              IconButton(
-                onPressed: () {
-                  Navigator.of(context).pop();
-                },
-                icon: Icon(Icons.arrow_back),
-                color: Color(0xff35016D),
-                iconSize: screenHeight * 0.08,
+              Padding(
+                padding: EdgeInsets.only(right: screenWidth * 0.03),
+                child: IconButton(
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  // icon: Icon(Icons.arrow_back),
+                  icon: Icon(Icons.arrow_back_ios),
+                  color: Color(0xff35016D),
+                  iconSize: screenHeight * 0.08,
+                ),
               ),
               // SizedBox(
               //   width: screenWidth * 0.2,
@@ -120,7 +124,7 @@ class _TopicsLGUrdoState extends State<TopicsLGUrdo> {
               Expanded(
                 child: Text(
                   // topicData[0].title,
-                  'مقامی حکومت کے پی',
+                  'مقامی حکومت خیبر پختونخواہ',
                   style: TextStyle(
                     fontSize: txtFont * 25,
                     fontWeight: FontWeight.bold,

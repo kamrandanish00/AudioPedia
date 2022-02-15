@@ -107,20 +107,39 @@ class _TopicsLGPashtoState extends State<TopicsLGPashto> {
           Row(
             // mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              IconButton(
-                onPressed: () {
-                  Navigator.of(context).pop();
-                },
-                icon: Icon(Icons.arrow_back),
-                color: Color(0xff35016D),
-                iconSize: screenHeight * 0.08,
+              // IconButton(
+              //   onPressed: () {
+              //     Navigator.of(context).pop();
+              //   },
+              //   icon: Icon(Icons.arrow_back),
+              //   color: Color(0xff35016D),
+              //   iconSize: screenHeight * 0.08,
+              // ),
+
+              //
+              Padding(
+                padding: EdgeInsets.symmetric(
+                  horizontal: screenWidth * 0.04,
+                ),
+                child: IconButton(
+                  color: Colors.white,
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  icon: Icon(
+                    // Icons.arrow_back_ios_new_rounded,
+                    Icons.arrow_back_ios,
+                    color: Color(0xff35016D),
+                    size: screenHeight * 0.06,
+                  ),
+                ),
               ),
               Expanded(
                 child: Text(
                   // topicData[0].title,
-                  'مقامی حکومت کے پی',
+                  'خیبرپختونخوا ' + 'مقامی حکومت',
                   style: TextStyle(
-                    fontSize: txtFont * 25,
+                    fontSize: txtFont * 22,
                     fontWeight: FontWeight.bold,
                     color: Color(0xff35016D),
                   ),
