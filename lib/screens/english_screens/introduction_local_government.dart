@@ -334,7 +334,7 @@ class _IntroductionToLocalGovernmentState
                               textAlign: locale == Locale('ur') ||
                                       locale == Locale('ps')
                                   ? TextAlign.right
-                                  : TextAlign.left,
+                                  : TextAlign.justify,
                             ),
                           ),
                         ),

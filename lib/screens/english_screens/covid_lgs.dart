@@ -5,6 +5,7 @@ import 'package:lgs_audiopedia/common/contact_drawer.dart';
 import 'package:lgs_audiopedia/common/header.dart';
 import 'package:lgs_audiopedia/screens/english_screens/Dengue_screens/village_counsel_dengue.dart';
 import 'package:lgs_audiopedia/screens/english_screens/lg_screens_english/village_counsel_lg_eng.dart';
+import 'package:lgs_audiopedia/screens/english_screens/tehsil_counsel.dart';
 import 'package:lgs_audiopedia/screens/english_screens/village_counsel.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
@@ -89,7 +90,7 @@ class CovidLgs extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (ctx) => VillageCounsel()));
+                                    builder: (ctx) => TehsilCounsel()));
                           },
                           child: Image.asset(
                             'assets/covid19.png',

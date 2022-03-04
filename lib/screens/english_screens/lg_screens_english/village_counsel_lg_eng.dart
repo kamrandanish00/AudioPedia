@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lgs_audiopedia/common/header.dart';
 import 'package:lgs_audiopedia/screens/english_screens/lg_screens_english/tehsil_counsel_lg_eng.dart';
+import 'package:lgs_audiopedia/screens/english_screens/lg_screens_english/topics_of_lg_eng.dart';
 
 class VillageCounselLGEng extends StatelessWidget {
   const VillageCounselLGEng({Key? key}) : super(key: key);
@@ -92,7 +93,7 @@ class VillageCounselLGEng extends StatelessWidget {
             child: GestureDetector(
               onTap: () {
                 Navigator.pushReplacement(context,
-                    MaterialPageRoute(builder: (ctx) => TehsilCounselLGEng()));
+                    MaterialPageRoute(builder: (ctx) => TopicsOfLGEng()));
               },
               child: Container(
                 alignment: Alignment.center,

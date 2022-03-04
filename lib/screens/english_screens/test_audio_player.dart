@@ -88,7 +88,7 @@ class _TextAudioPlayerState extends State<TextAudioPlayer> {
       });
       print('This is the progress value: $progress');
     });
-    FlutterDownloader.registerCallback(downloadingCallBack);
+    // FlutterDownloader.registerCallback(downloadingCallBack);
 
     //downloading ends
 

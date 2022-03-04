@@ -109,7 +109,7 @@ class _FeedbackFormState extends State<FeedbackForm> {
 
   //getting provinces
   Future getProvinces() async {
-    String url = 'http://aagahibaldiyatkp.com/api/provinces.php';
+    String url = 'https://aagahibaldiyatkp.com/api/provinces.php';
 
     try {
       var response = await http.get(Uri.parse(url));
@@ -138,7 +138,7 @@ class _FeedbackFormState extends State<FeedbackForm> {
   //fetching districts
   Future getDistricts() async {
     String districsUrl =
-        'http://aagahibaldiyatkp.com/api/district.php?id=$selectedProvince';
+        'https://aagahibaldiyatkp.com/api/district.php?id=$selectedProvince';
 
     try {
       var response = await http.get(Uri.parse(districsUrl));
@@ -161,7 +161,7 @@ class _FeedbackFormState extends State<FeedbackForm> {
   List? tehsilsData;
   Future getTehsils() async {
     String tehsilsUrl =
-        'http://aagahibaldiyatkp.com/api/tehsil.php?id=$selectedDistrict';
+        'https://aagahibaldiyatkp.com/api/tehsil.php?id=$selectedDistrict';
 
     try {
       var response = await http.get(Uri.parse(tehsilsUrl));
@@ -184,7 +184,7 @@ class _FeedbackFormState extends State<FeedbackForm> {
 
   //getting provinces
   Future getDepartments() async {
-    String url = 'http://aagahibaldiyatkp.com/api/department.php';
+    String url = 'https://aagahibaldiyatkp.com/api/department.php';
 
     try {
       var response = await http.get(Uri.parse(url));
@@ -208,7 +208,7 @@ class _FeedbackFormState extends State<FeedbackForm> {
   //getting complaints nature
   Future getComplaintsNature() async {
     String url =
-        'http://aagahibaldiyatkp.com/api/naturelist.php?id=$selectedDepartment';
+        'https://aagahibaldiyatkp.com/api/naturelist.php?id=$selectedDepartment';
 
     try {
       var response = await http.get(Uri.parse(url));
@@ -244,89 +244,9 @@ class _FeedbackFormState extends State<FeedbackForm> {
     'Peshtakhara Tehsil',
     'Hassan Kheil Tehsil'
   ];
-  // String? selectedTehsil = 'Peshawar City Tehsil';
 
-  //image picker
-  // dynamic _image;
-  //picking image using camera
-  // _imgFromCamera() async {
-  //   dynamic image = await ImagePicker()
-  //       .pickImage(source: ImageSource.camera, imageQuality: 50);
-
-  //   setState(() {
-  //     _image = image;
-  //   });
-  // }
   //
   File? image;
-  // Future pickImageFromCamera() async {
-  //   try {
-  //     final image = await ImagePicker().pickImage(source: ImageSource.camera);
-  //     if (image == null) return;
-  //     final imageTemporary = File(image.path);
-  //     setState(() {
-  //       this.image = imageTemporary;
-  //     });
-  //   } on PlatformException catch (e) {
-  //     print('Failed to pick image: $e');
-  //   }
-  // }
-
-  //image from gallery johnness milke
-  // Future pickImageGallery() async {
-  //   try {
-  //     final image = await ImagePicker().pickImage(source: ImageSource.gallery);
-  //     if (image == null) return;
-  //     final imageTemperoray = File(image.path);
-  //     setState(() {
-  //       this.image = imageTemperoray;
-  //     });
-  //   } on PlatformException catch (e) {
-  //     print('Faild to pick image from gallery $e');
-  //   }
-  // }
-
-  // _imgFromGallery() async {
-  //   XFile? image = await ImagePicker()
-  //       .pickImage(source: ImageSource.gallery, imageQuality: 50);
-
-  //   setState(() {
-  //     _image = image;
-  //   });
-  // }
-
-  // choose camera or gallery choice for user
-  // void _showPicker(context) {
-  //   showModalBottomSheet(
-  //       context: context,
-  //       builder: (BuildContext bc) {
-  //         return SafeArea(
-  //           child: Container(
-  //             child: new Wrap(
-  //               children: <Widget>[
-  //                 new ListTile(
-  //                     leading: new Icon(Icons.photo_library),
-  //                     title: new Text('Photo Library'),
-  //                     onTap: () {
-  //                       pickImageGallery();
-  //                       Navigator.of(context).pop();
-  //                     }),
-  //                 new ListTile(
-  //                   leading: new Icon(Icons.photo_camera),
-  //                   title: new Text('Camera'),
-  //                   onTap: () {
-  //                     // _imgFromCamera();
-  //                     pickImageFromCamera();
-
-  //                     Navigator.of(context).pop();
-  //                   },
-  //                 ),
-  //               ],
-  //             ),
-  //           ),
-  //         );
-  //       });
-  // }
 
   //build method
   final _formKey = GlobalKey<FormState>();
@@ -1357,9 +1277,19 @@ class _FeedbackFormState extends State<FeedbackForm> {
                     ),
                   ),
                 )
-              : Center(
-                  child: Container(
-                    child: CircularProgressIndicator(),
+              : Expanded(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        child: CircularProgressIndicator(),
+                      ),
+                      SizedBox(height: 30),
+                      Text(
+                        'Coming soon',
+                        style: TextStyle(color: Colors.grey.withOpacity(0.3)),
+                      ),
+                    ],
                   ),
                 ),
         ],
@@ -1374,7 +1304,7 @@ class _FeedbackFormState extends State<FeedbackForm> {
   }
 
   Future RegisterComplaint() async {
-    var apiUrl = 'http://aagahibaldiyatkp.com/api/insertcomplaint.php';
+    var apiUrl = 'https://aagahibaldiyatkp.com/api/insertcomplaint.php';
 
     Map<String, dynamic> mapeddata = {
       'nature': selectedDepartment,

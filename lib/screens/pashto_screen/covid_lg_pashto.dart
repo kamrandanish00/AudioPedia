@@ -7,6 +7,7 @@ import 'package:lgs_audiopedia/common/header.dart';
 import 'package:lgs_audiopedia/l10n/localization/provider/locale_provider.dart';
 import 'package:lgs_audiopedia/screens/pashto_screen/dengue_pashto_screen/dengue_pashto_screen.dart';
 import 'package:lgs_audiopedia/screens/pashto_screen/lg_pashto_topics_list.dart';
+import 'package:lgs_audiopedia/screens/pashto_screen/tehsil_counsel_pashto.dart';
 import 'package:lgs_audiopedia/screens/pashto_screen/village_counsel_pashto.dart';
 import 'package:lgs_audiopedia/screens/english_screens/village_counsel.dart';
 import 'package:provider/provider.dart';
@@ -120,7 +121,7 @@ class CovidLgPashto extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (ctx) => VillageCounselPashto()));
+                                    builder: (ctx) => TehsilCounselPashto()));
                           },
                           child: Image.asset(
                             'assets/covid_urdo.png',
