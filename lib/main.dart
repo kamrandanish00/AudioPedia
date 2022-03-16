@@ -10,8 +10,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:lgs_audiopedia/l10n/l10n.dart';
 import 'package:lgs_audiopedia/l10n/localization/localization_system_page.dart';
 import 'package:lgs_audiopedia/l10n/localization/provider/locale_provider.dart';
-import 'package:lgs_audiopedia/rough_cipper_path.dart';
-import 'package:lgs_audiopedia/rough_downloader.dart';
+
 import 'package:lgs_audiopedia/screens/english_screens/Splash_screen.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
@@ -91,9 +90,6 @@ class MyApp extends StatelessWidget {
           ],
           //main app splashscreen
           home: SplashScreen(),
-          // home: LocalizationSystemPage(),
-          // home: RoughDownloader(),
-          // home: RoughClipperAndPath(),
         );
       },
     );
